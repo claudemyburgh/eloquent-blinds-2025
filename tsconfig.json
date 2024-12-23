@@ -68,8 +68,12 @@
         "strict": true,
         "skipLibCheck": true,
         "noImplicitAny": false,
-        "esModuleInterop": true, // Required for proper interoperability with CommonJS modules when using allowSyntheticDefaultImports
+        "esModuleInterop": true,
+        // Required for proper interoperability with CommonJS modules when using allowSyntheticDefaultImports
         "allowSyntheticDefaultImports": true,
+        "types": [
+            "vite/client"
+        ],
         "paths": {
             "@/*": [
                 "./resources/ts/*"

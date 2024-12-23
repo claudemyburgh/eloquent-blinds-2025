@@ -4,6 +4,14 @@
     "src": "resources/css/app.css",
     "isEntry": true
   },
+  "resources/img/brand/dark.svg": {
+    "file": "assets/dark-CuozLE8-.svg",
+    "src": "resources/img/brand/dark.svg"
+  },
+  "resources/img/brand/light.svg": {
+    "file": "assets/light-Cz-XeT4w.svg",
+    "src": "resources/img/brand/light.svg"
+  },
   "resources/ts/app.ts": {
     "file": "assets/app-B5nFhwYi.js",
     "name": "app",
