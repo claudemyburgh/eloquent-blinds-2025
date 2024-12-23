@@ -1,0 +1,85 @@
+/**
+ * TypeScript compiler configuration file.
+ *
+ * This file configures the TypeScript compiler (tsc) to transpile TypeScript code
+ * into JavaScript. It defines the target JavaScript version, module system,
+ * module resolution strategy, and other important compiler options. Proper
+ * configuration ensures code compatibility across different environments and
+ * improves code maintainability.
+ *
+ * Key Configurations and their purposes:
+ *
+ * - `target`: Specifies the ECMAScript target version (e.g., ES5, ES6). This
+ *   determines the JavaScript features that can be used in the generated code
+ *   and affects browser compatibility.  Choosing a lower target like ES5 ensures
+ *   wider browser support, while higher targets allow for more modern JavaScript
+ *   syntax.
+ *
+ * - `module`: Defines the module system to be used (e.g., CommonJS, ES Modules).
+ *   This affects how modules are imported and exported in the generated code.
+ *   ES Modules are the modern standard, while CommonJS is commonly used in Node.js
+ *   environments.
+ *
+ * - `moduleResolution`: Specifies the module resolution strategy (e.g., 'node',
+ *   'classic').  This determines how the compiler finds modules based on import
+ *   statements. 'node' is the recommended setting for most projects.
+ *
+ * - `baseUrl` and `paths`:  These settings work together to simplify module
+ *   imports. `baseUrl` sets a base directory for resolving relative module paths,
+ *   and `paths` allows for using aliases to map module imports to specific
+ *   locations.  This improves code readability and reduces the need for long,
+ *   relative import paths.  For example, using `@/*` to map to `./resources/ts/*`
+ *   allows imports like `import MyComponent from '@/components/MyComponent'`.
+ *
+ * - `strict`: Enables strict type checking.  This helps catch potential errors
+ *   during development and improves code quality by enforcing stricter type
+ *   safety.
+ *
+ * - `skipLibCheck`:  Skips type checking of declaration files (.d.ts files) from
+ *   external libraries.  This can speed up compilation time, especially in
+ *   larger projects.
+ *
+ * - `noImplicitAny`:  Disallows implicit 'any' types. This enforces stricter
+ *   type checking and helps prevent runtime errors caused by unexpected type
+ *   coercion. Setting this to `true` is generally recommended for better
+ *   type safety, but is set to `false` here for more flexibility.
+ *
+ * - `allowSyntheticDefaultImports`: Allows default imports from modules that don't have a default export.
+ *    This is particularly useful when importing CommonJS modules into ES Modules code, as CommonJS modules often
+ *    don't explicitly define a default export. Enabling this option can simplify the import process, but be mindful
+ *    of potential runtime issues if the imported module does not actually provide a default export.  This should be used
+ *    with "esModuleInterop": true.
+ *
+ * - `include`: Specifies the source files or directories to be included in
+ *    compilation.  This allows for targeting specific parts of the project for
+ *    compilation. Glob patterns can be used for flexible file matching.
+ *
+ * - `exclude`: Specifies files or directories to be excluded from compilation. This is
+ *   often used to exclude the `node_modules` directory, which contains third-party
+ *   libraries that don't need to be recompiled.
+ *  "esModuleInterop": true, // Enables interoperability between CommonJS and ES Modules. Should be used with allowSyntheticDefaultImports
+ */
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es2020",
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "strict": true,
+        "skipLibCheck": true,
+        "noImplicitAny": false,
+        "esModuleInterop": true, // Required for proper interoperability with CommonJS modules when using allowSyntheticDefaultImports
+        "allowSyntheticDefaultImports": true,
+        "paths": {
+            "@/*": [
+                "./resources/ts/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "resources/ts/**/*"
+    ]
+}
