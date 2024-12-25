@@ -34,8 +34,8 @@
                 ->schema([
 
                     Forms\Components\Section::make('Product Information')->schema([
-                        SpatieMediaLibraryFileUpload::make('featured_image')
-                            ->collection('products')
+
+                        SpatieMediaLibraryFileUpload::make('image')
                             ->columnSpanFull(),
 
                         SelectTree::make('category_id')

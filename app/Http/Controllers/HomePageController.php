@@ -3,7 +3,8 @@
     namespace App\Http\Controllers;
 
 
-    use App\Models\Category;
+    use App\Models\Product;
+    use Illuminate\Support\Facades\Cache;
     use Illuminate\View\View;
 
     class HomePageController extends Controller
@@ -19,7 +20,7 @@
 
 
             return view('pages.home', [
-                'categories' => Category::live()->with('products')->get()->toTree()
+                'products' => Cache::remember('home-products', 5, fn () => Product::with('media', 'category')->where('popular', 1)->limit(4)->get()),
             ]);
         }
     }

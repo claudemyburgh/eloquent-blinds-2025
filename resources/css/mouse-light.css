@@ -1,0 +1,36 @@
+@layer base {
+    .mouse-light {
+        @apply relative;
+        --mouse-x: 0;
+        --mouse-y: 0;
+        --light: rgba(14, 165, 233, 0.10);
+        --light-size: 300px;
+    }
+
+    .dark .mouse-light {
+        --light: rgba(75, 155, 255, 0.25)
+    }
+
+    .mouse-light:hover::before {
+        opacity: 1;
+        --light-size: 300px;
+    }
+
+    .mouse-light::before {
+        --light-size: 10px;
+        content: "";
+        background: radial-gradient(var(--light-size) circle at var(--mouse-x) var(--mouse-y), var(--light), transparent);
+        filter: saturate(150%);
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        border-radius: inherit;
+        position: absolute;
+        opacity: 0;
+        transition-duration: 250ms;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        transform-origin: center;
+    }
+}

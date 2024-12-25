@@ -1,0 +1,19 @@
+@utility heading-1 {
+    @apply text-4xl font-black sm:text-5xl text-gray-900 dark:text-white tracking-tight;
+}
+
+@utility heading-2 {
+    @apply text-3xl font-black sm:text-5xl text-gray-900 dark:text-white tracking-tight;
+}
+
+@utility heading-3 {
+    @apply text-3xl font-extrabold sm:text-4xl text-gray-900 dark:text-white tracking-tight;
+}
+
+@utility heading-4 {
+    @apply text-lg font-extrabold sm:text-xl text-gray-900 dark:text-white tracking-tight;
+}
+
+@utility leading-text {
+    @apply mt-3 text-lg leading-8 text-gray-500 dark:text-gray-300;
+}

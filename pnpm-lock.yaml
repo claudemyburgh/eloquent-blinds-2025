@@ -22,6 +22,9 @@ dependencies:
     version: 0.10.1
 
 devDependencies:
+  '@designbycode/tailwindcss-mask-image':
+    specifier: ^2.0.3
+    version: 2.0.3(tailwindcss@4.0.0-beta.8)
   '@designbycode/tailwindcss-text-shadow':
     specifier: ^2.2.1
     version: 2.2.1(tailwindcss@4.0.0-beta.8)
@@ -82,6 +85,14 @@ packages:
       postcss-selector-parser: ^7.0.0
     dependencies:
       postcss-selector-parser: 7.0.0
+    dev: true
+
+  /@designbycode/tailwindcss-mask-image@2.0.3(tailwindcss@4.0.0-beta.8):
+    resolution: {integrity: sha512-GBc3NFahW3BzDHqPCd3XI5ALvtV3lQVMFQdUwsrQzJ4CvWCMuF2ELjveV/1SE+QQsr6rKE9GIZxTXGoG/mHMVQ==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 4.0.0-beta.8
     dev: true
 
   /@designbycode/tailwindcss-text-shadow@2.2.1(tailwindcss@4.0.0-beta.8):

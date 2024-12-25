@@ -7,15 +7,16 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=poppins:300,500,600i,700,800i,900,900i" rel="stylesheet"/>
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800,900&display=swap" rel="stylesheet"/>
 
     <!-- Styles / Scripts -->
     @livewireStyles
     @filamentStyles
     @vite(['resources/css/app.css', 'resources/ts/app.ts'])
 </head>
-<body class="font-sans antialiased bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-300 flex flex-col h-full">
+<body class="font-sans antialiased bg-white overflow-x-clip text-gray-800 dark:bg-gray-900 dark:text-gray-300 flex flex-col h-full">
 <x-app::skip/>
 <x-patterns.grid class="h-100 fixed top-0 inset-x-0 z-0"/>
 <x-navigation/>
@@ -23,7 +24,10 @@
     {{ $slot }}
 </main>
 
+
+<x-cta.blinds/>
 <x-marquee.full></x-marquee.full>
+
 
 @if(Route::currentRouteName() !== 'quote.index')
     <div class="wrapper">

@@ -8,10 +8,8 @@
     use Illuminate\Database\Eloquent\Relations\HasMany;
     use Illuminate\Database\Eloquent\SoftDeletes;
     use Kalnoy\Nestedset\NodeTrait;
-    use Spatie\Image\Enums\Fit;
     use Spatie\MediaLibrary\HasMedia;
     use Spatie\MediaLibrary\InteractsWithMedia;
-    use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 
     class Category extends Model implements HasMedia
@@ -38,30 +36,6 @@
             return $this->hasMany(Product::class);
         }
 
-        /**
-         * @param \Spatie\MediaLibrary\MediaCollections\Models\Media|null $media
-         *
-         * @return void
-         */
-        public function registerMediaConversions(?Media $media = null): void
-        {
-            foreach (config('image-conversion.default') as $key => $image) {
-                $this->addMediaConversion($key)
-                    ->format($image['format'])
-                    ->blur($image['blur'])
-                    ->fit(Fit::Max, $image['height'], $image['height'])
-                    ->nonQueued();
-            }
-        }
-
-        /**
-         * @return void
-         */
-        public function registerMediaCollections(): void
-        {
-            $this->addMediaCollection('categories')
-                ->useFallbackUrl(url(config('app.placeholder')));
-        }
 
         /**
          * @return string[]

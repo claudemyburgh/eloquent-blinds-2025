@@ -1,8 +1,16 @@
 @import 'tailwindcss';
+@import "scrollbar.css";
+@import "btn.css";
+@import "global.css";
+@import "mouse-light.css";
+@import "link.css";
+@import "panel.css";
+@import "text-and-heading.css";
 
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/container-queries';
+/*@plugin '@designbycode/tailwindcss-mask-image'*/
 /*@plugin '@designbycode/tailwindcss-text-shadow';*/
 @preset '../../vendor/filament/support/tailwind.config.preset'
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -63,7 +71,7 @@
     --color-gray-900: #111827;
     --color-gray-950: #030712;
 
-    --font-sans: Poppins, ui-sans-serif, system-ui, sans-serif,
+    --font-sans: Figtree, ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
     --radius-default: .5rem;
@@ -91,83 +99,8 @@
     }
 
 
-    .mouse-light {
-        @apply relative;
-        --mouse-x: 0;
-        --mouse-y: 0;
-        --light: rgba(14, 165, 233, 0.10);
-        --light-size: 300px;
-    }
-
-    .dark .mouse-light {
-        --light: rgba(75, 155, 255, 0.25)
-    }
-
-    .mouse-light:hover::before {
-        opacity: 1;
-        --light-size: 300px;
-    }
-
-    .mouse-light::before {
-        --light-size: 10px;
-        content: "";
-        background: radial-gradient(var(--light-size) circle at var(--mouse-x) var(--mouse-y), var(--light), transparent);
-        filter: saturate(150%);
-        height: 100%;
-        width: 100%;
-        z-index: 10;
-        border-radius: inherit;
-        position: absolute;
-        opacity: 0;
-        transition-duration: 250ms;
-        pointer-events: none;
-        top: 0;
-        left: 0;
-        transform-origin: center;
-    }
-
-    .heading-1 {
-        @apply text-4xl font-black sm:text-5xl text-gray-900 dark:text-white tracking-tight;
-    }
-
-    .heading-2 {
-        @apply text-3xl font-black sm:text-5xl text-gray-900 dark:text-white tracking-tight;
-    }
-
-    .heading-3 {
-        @apply text-3xl font-extrabold sm:text-4xl text-gray-900 dark:text-white tracking-tight;
-    }
-
-    .heading-4 {
-        @apply text-lg font-extrabold sm:text-xl text-gray-900 dark:text-white tracking-tight;
-    }
-
-
 }
 
-@layer components {
-    .panel {
-        @apply bg-gray-100/50 dark:bg-gray-950/50 shadow-sm shadow-black/20 border border-gray-300 dark:border-gray-800 backdrop-blur-lg rounded-default;
-    }
-
-    .wrapper {
-        @apply w-full max-w-7xl px-4 md:px-6 lg:px-8 mx-auto;
-    }
-
-    .btn {
-        @apply inline-flex items-center px-4 py-2 rounded-default font-semibold text-sm uppercase tracking-widest transition ease-in-out duration-150 disabled:opacity-25 focus:outline-none focus:ring-2;
-    }
-
-    .btn-gradient {
-        @apply inline-flex items-center bg-gradient-to-b from-primary-600 to-secondary-400 border border-transparent rounded-default font-semibold text-xs  uppercase tracking-widest hover:to-secondary-300 focus:to-secondary-300 active:to-secondary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition ease-in-out duration-150 text-white;
-    }
-
-    .hover-underline {
-        @apply hover:underline underline-offset-8 decoration-wavy isolate z-10 decoration-gray-300/10 hover:decoration-primary-500 decoration-1 inline-block relative;
-    }
-
-
-}
 
 
 

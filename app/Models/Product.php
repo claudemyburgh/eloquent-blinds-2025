@@ -9,10 +9,8 @@
     use Illuminate\Database\Eloquent\Model;
     use Illuminate\Database\Eloquent\Relations\BelongsTo;
     use Illuminate\Database\Eloquent\SoftDeletes;
-    use Spatie\Image\Enums\Fit;
     use Spatie\MediaLibrary\HasMedia;
     use Spatie\MediaLibrary\InteractsWithMedia;
-    use Spatie\MediaLibrary\MediaCollections\Models\Media;
     use Spatie\Tags\HasTags;
 
     class Product extends Model implements HasMedia
@@ -42,31 +40,6 @@
             return $this->belongsTo(Category::class);
         }
 
-
-        /**
-         * @param \Spatie\MediaLibrary\MediaCollections\Models\Media|null $media
-         *
-         * @return void
-         */
-        public function registerMediaConversions(?Media $media = null): void
-        {
-            foreach (config('image-conversion.default') as $key => $image) {
-                $this->addMediaConversion($key)
-                    ->format($image['format'])
-                    ->blur($image['blur'])
-                    ->fit(Fit::Max, $image['height'], $image['height'])
-                    ->nonQueued();
-            }
-        }
-
-        /**
-         * @return void
-         */
-        public function registerMediaCollections(): void
-        {
-            $this->addMediaCollection('products')
-                ->useFallbackUrl(url(config('app.placeholder')));
-        }
 
         /**
          * @param \Illuminate\Database\Eloquent\Builder $builder
