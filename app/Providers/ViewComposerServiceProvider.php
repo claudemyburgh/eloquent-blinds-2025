@@ -22,6 +22,6 @@
          */
         public function boot(): void
         {
-            View::composer(['components.navigation.index', 'components.marquee.full'], NavigationComposer::class);
+            View::composer(['components.navigation.index', 'components.marquee.full', 'components.footer.index'], NavigationComposer::class);
         }
     }

@@ -145,6 +145,11 @@
         @apply inline-flex items-center bg-gradient-to-b from-primary-600 to-secondary-400 border border-transparent rounded-default font-semibold text-xs  uppercase tracking-widest hover:to-secondary-300 focus:to-secondary-300 active:to-secondary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition ease-in-out duration-150 text-white;
     }
 
+    .hover-underline {
+        @apply hover:underline underline-offset-8 decoration-wavy isolate z-10 decoration-gray-300/10 hover:decoration-primary-500 decoration-1 inline-block relative;
+    }
+
+
 }
 
 
