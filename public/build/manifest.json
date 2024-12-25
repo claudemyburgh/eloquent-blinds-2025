@@ -1,8 +1,20 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-C0m98QH-.css",
+    "file": "assets/app-Bo21CUHc.css",
     "src": "resources/css/app.css",
     "isEntry": true
+  },
+  "resources/img/alu-blinds.webp": {
+    "file": "assets/alu-blinds-DXI-ROj5.webp",
+    "src": "resources/img/alu-blinds.webp"
+  },
+  "resources/img/bambo-blinds.webp": {
+    "file": "assets/bambo-blinds-C939pc5S.webp",
+    "src": "resources/img/bambo-blinds.webp"
+  },
+  "resources/img/black-blinds.webp": {
+    "file": "assets/black-blinds-2c4owaie.webp",
+    "src": "resources/img/black-blinds.webp"
   },
   "resources/img/brand/dark.svg": {
     "file": "assets/dark-CuozLE8-.svg",
@@ -12,10 +24,97 @@
     "file": "assets/light-Cz-XeT4w.svg",
     "src": "resources/img/brand/light.svg"
   },
+  "resources/img/google-logo.svg": {
+    "file": "assets/google-logo-DzpxA-yY.svg",
+    "src": "resources/img/google-logo.svg"
+  },
+  "resources/img/hero.webp": {
+    "file": "assets/hero-Cgjg-rGN.webp",
+    "src": "resources/img/hero.webp"
+  },
+  "resources/img/honey-blinds.webp": {
+    "file": "assets/honey-blinds-De-mTx5Z.webp",
+    "src": "resources/img/honey-blinds.webp"
+  },
+  "resources/img/measure/measure-face-fix.png": {
+    "file": "assets/measure-face-fix-CXCnAbCo.png",
+    "src": "resources/img/measure/measure-face-fix.png"
+  },
+  "resources/img/meta/eloquent.jpg": {
+    "file": "assets/eloquent-DEyb1l-I.jpg",
+    "src": "resources/img/meta/eloquent.jpg"
+  },
+  "resources/img/motion.webp": {
+    "file": "assets/motion-CRuTKvGr.webp",
+    "src": "resources/img/motion.webp"
+  },
+  "resources/img/nairobi-card.webp": {
+    "file": "assets/nairobi-card-Cjd1bGWl.webp",
+    "src": "resources/img/nairobi-card.webp"
+  },
+  "resources/img/profile/claude.jpg": {
+    "file": "assets/claude-CbsOnD3V.jpg",
+    "src": "resources/img/profile/claude.jpg"
+  },
+  "resources/img/profile/claude.webp": {
+    "file": "assets/claude-qvHIFIuO.webp",
+    "src": "resources/img/profile/claude.webp"
+  },
+  "resources/img/profile/xavier-black-white.jpg": {
+    "file": "assets/xavier-black-white-LB26xrqd.jpg",
+    "src": "resources/img/profile/xavier-black-white.jpg"
+  },
+  "resources/img/profile/xavier-black-white.webp": {
+    "file": "assets/xavier-black-white-oSGAJkY1.webp",
+    "src": "resources/img/profile/xavier-black-white.webp"
+  },
+  "resources/img/profile/xavier-blue-tint.jpg": {
+    "file": "assets/xavier-blue-tint-CXw-Kfs6.jpg",
+    "src": "resources/img/profile/xavier-blue-tint.jpg"
+  },
+  "resources/img/profile/xavier-blue-tint.webp": {
+    "file": "assets/xavier-blue-tint-n8v6HAo3.webp",
+    "src": "resources/img/profile/xavier-blue-tint.webp"
+  },
+  "resources/img/profile/xavier-colored.jpg": {
+    "file": "assets/xavier-colored-Dgv2l4uz.jpg",
+    "src": "resources/img/profile/xavier-colored.jpg"
+  },
+  "resources/img/profile/xavier-colored.webp": {
+    "file": "assets/xavier-colored-pMNSDAdH.webp",
+    "src": "resources/img/profile/xavier-colored.webp"
+  },
+  "resources/img/profile/xavier.jpg": {
+    "file": "assets/xavier-C0Ajc9UZ.jpg",
+    "src": "resources/img/profile/xavier.jpg"
+  },
+  "resources/img/profile/xavier.webp": {
+    "file": "assets/xavier-Hq9KHfR6.webp",
+    "src": "resources/img/profile/xavier.webp"
+  },
+  "resources/img/roller-blinds.webp": {
+    "file": "assets/roller-blinds-XV52Fuui.webp",
+    "src": "resources/img/roller-blinds.webp"
+  },
+  "resources/img/shutterguard.webp": {
+    "file": "assets/shutterguard-FySg450V.webp",
+    "src": "resources/img/shutterguard.webp"
+  },
+  "resources/img/tylor/logo.svg": {
+    "file": "assets/logo-B2Vr3xPy.svg",
+    "src": "resources/img/tylor/logo.svg"
+  },
+  "resources/img/zebra-blinds.webp": {
+    "file": "assets/zebra-blinds-CUAOGnH0.webp",
+    "src": "resources/img/zebra-blinds.webp"
+  },
   "resources/ts/app.ts": {
-    "file": "assets/app-B5nFhwYi.js",
+    "file": "assets/app-B7Z9wriy.js",
     "name": "app",
     "src": "resources/ts/app.ts",
-    "isEntry": true
+    "isEntry": true,
+    "css": [
+      "assets/app-DMqL9CFT.css"
+    ]
   }
 }

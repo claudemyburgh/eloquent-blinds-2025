@@ -24,5 +24,7 @@
             Schema::defaultStringLength(191);
 
             Blade::anonymousComponentPath(__DIR__ . '/../../resources/views/layouts/partials', 'app');
+
+
         }
     }
