@@ -2,6 +2,7 @@
 
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+@plugin '@tailwindcss/container-queries';
 /*@plugin '@designbycode/tailwindcss-text-shadow';*/
 @preset '../../vendor/filament/support/tailwind.config.preset'
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -123,6 +124,22 @@
         top: 0;
         left: 0;
         transform-origin: center;
+    }
+
+    .heading-1 {
+        @apply text-4xl font-black sm:text-5xl text-gray-900 dark:text-white tracking-tight;
+    }
+
+    .heading-2 {
+        @apply text-3xl font-black sm:text-5xl text-gray-900 dark:text-white tracking-tight;
+    }
+
+    .heading-3 {
+        @apply text-3xl font-extrabold sm:text-4xl text-gray-900 dark:text-white tracking-tight;
+    }
+
+    .heading-4 {
+        @apply text-lg font-extrabold sm:text-xl text-gray-900 dark:text-white tracking-tight;
     }
 
 

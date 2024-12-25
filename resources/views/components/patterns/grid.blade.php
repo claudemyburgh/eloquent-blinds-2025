@@ -1,4 +1,4 @@
-<div aria-hidden="true" {{ $attributes->merge(['class' => 'pointer-events-none fixed top-0 inset-x-0 z-0']) }}>
+<div aria-hidden="true" {{ $attributes->merge(['class' => 'pointer-events-none ']) }}>
     <svg class="absolute inset-0 -z-10 h-full w-full stroke-primary-500/20 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
         <defs>
             <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="100" height="100" x="50%" y="-1" patternUnits="userSpaceOnUse">

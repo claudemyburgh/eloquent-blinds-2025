@@ -8,7 +8,7 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=poppins:400,500,600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.bunny.net/css?family=poppins:300,500,600i,700,800i,900,900i" rel="stylesheet"/>
 
     <!-- Styles / Scripts -->
     @livewireStyles
@@ -17,7 +17,7 @@
 </head>
 <body class="font-sans antialiased bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-300 flex flex-col h-full">
 <x-app::skip/>
-<x-patterns.grid class="h-1/3 "/>
+<x-patterns.grid class="h-100 fixed top-0 inset-x-0 z-0"/>
 <x-navigation/>
 <main id="main" @class(['my-20 flex-1'])>
     {{ $slot }}
@@ -25,9 +25,12 @@
 
 <x-marquee.full></x-marquee.full>
 
-<div class="wrapper">
-    <button type="button" is="headless-scrolltop" class="bg-red-500 text-white px-6 py-3 rounded-default" type="button">Scroll to top</button>
-</div>
+@if(Route::currentRouteName() !== 'quote.index')
+    <div class="wrapper">
+        <x-contact.section/>
+    </div>
+@endif
+
 
 <x-footer/>
 <!-- Scripts -->

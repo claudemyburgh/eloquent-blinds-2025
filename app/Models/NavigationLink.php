@@ -11,6 +11,7 @@
 
         const HOME_PAGE_ROUTE = "home";
         const ABOUT_PAGE_ROUTE = "about";
+        const QUOTE_PAGE_ROUTE = "quote.index";
 
         const SHUTTER_PAGE_ROUT = "";
 
@@ -49,8 +50,8 @@
             ],
             [
                 "name" => "Quote",
-                "slug" => "about-us",
-                "route" => self::ABOUT_PAGE_ROUTE,
+                "slug" => "quote",
+                "route" => self::QUOTE_PAGE_ROUTE,
                 "classes" => "btn btn-gradient text-white ",
                 "visible" => true,
                 'dropdown' => false,
