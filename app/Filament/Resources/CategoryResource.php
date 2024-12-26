@@ -31,9 +31,7 @@
                 ->schema(components: [
 
                     Forms\Components\Section::make('Category Information')->schema([
-                        SpatieMediaLibraryFileUpload::make('featured_image')
-                            ->collection('categories')
-//                            ->conversion('large')
+                        SpatieMediaLibraryFileUpload::make('image')
                             ->columnSpanFull(),
 
                         Forms\Components\TextInput::make('title')
