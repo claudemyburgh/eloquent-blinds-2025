@@ -35,7 +35,13 @@
 
                     Forms\Components\Section::make('Product Information')->schema([
 
-                        SpatieMediaLibraryFileUpload::make('image')
+                        SpatieMediaLibraryFileUpload::make('featured_image')
+                            ->multiple()
+                            ->downloadable()
+                            ->panelLayout('grid')
+                            ->imageEditor()
+                            ->reorderable()
+                            ->collection('products')
                             ->columnSpanFull(),
 
                         SelectTree::make('category_id')

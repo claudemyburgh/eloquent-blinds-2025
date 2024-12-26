@@ -9,8 +9,10 @@
     use Illuminate\Database\Eloquent\Model;
     use Illuminate\Database\Eloquent\Relations\BelongsTo;
     use Illuminate\Database\Eloquent\SoftDeletes;
+    use Spatie\Image\Enums\Fit;
     use Spatie\MediaLibrary\HasMedia;
     use Spatie\MediaLibrary\InteractsWithMedia;
+    use Spatie\MediaLibrary\MediaCollections\Models\Media;
     use Spatie\Tags\HasTags;
 
     class Product extends Model implements HasMedia
@@ -80,6 +82,23 @@
         public function scopeQuantum(Builder $builder): void
         {
             $builder->supplier(Supplier::QUANTUM);
+        }
+
+        public function registerMediaConversions(?Media $media = null): void
+        {
+            foreach (config('image-conversion.default') as $key => $image) {
+                $this->addMediaConversion($key)
+                    ->format($image['format'])
+                    ->blur($image['blur'])
+                    ->fit(Fit::Max, $image['height'], $image['height'])
+                    ->nonQueued();
+            }
+        }
+
+        public function registerMediaCollections(): void
+        {
+            $this->addMediaCollection('products')
+                ->useFallbackUrl(url(config('app.placeholder')));
         }
 
 
