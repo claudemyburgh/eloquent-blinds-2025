@@ -6,6 +6,12 @@
 
     @if($product->content)
         <div class="prose prose-lg dark:prose-invert my-2 ">
+
+            {{--            <x-markdown>--}}
+            {{--                {{ $product->content }}--}}
+            {{--            </x-markdown>--}}
+
+
             @markdown($product->content)
         </div>
     @endif

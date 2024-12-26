@@ -21,10 +21,12 @@ With our Security Shutters, say goodbye to traditional burglar bars and security
         "id" => 2,
         "title" => "Indoor Blinds",
         "slug" => "indoor-blinds",
-        "description" => "Upgrade your space with our sleek indoor blinds!",
+        "description" => "Upgrade your space with our sleek indoor blinds! Crafted from quality materials like wood, vinyl, or aluminum, these stylish window coverings offer total light and privacy control.
+
+Choose from chic styles like Roller, Venetian, Vertical Blinds to perfectly complement any room. With manual or motorized options, our custom-made blinds fit any window size. Elevate your home or office with our versatile indoor blinds today!.",
         "content" => "Upgrade your space with our sleek indoor blinds! Crafted from quality materials like wood, vinyl, or aluminum, these stylish window coverings offer total light and privacy control.
-                     Choose from chic styles like Roller, Venetian, Vertical Blinds to perfectly complement any room. With manual or motorized options, our custom-made blinds fit any window size. Elevate your home or office with our versatile indoor blinds today!.
-                ",
+
+Choose from chic styles like Roller, Venetian, Vertical Blinds to perfectly complement any room. With manual or motorized options, our custom-made blinds fit any window size. Elevate your home or office with our versatile indoor blinds today!.",
         "popular" => 0,
         "live" => 1,
         "_lft" => 3,
@@ -32,7 +34,7 @@ With our Security Shutters, say goodbye to traditional burglar bars and security
         "parent_id" => null,
         "deleted_at" => null,
         "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 11:43:33",
+        "updated_at" => "2024-12-26 15:02:58",
     ],
     [
         "id" => 3,
@@ -88,8 +90,8 @@ As window covering specialists, we draw on years of experience to create innovat
         "slug" => "roller-blinds",
         "description" => "Roller blinds reign as the world's favorite shading solution, boasting endless style and functionality options. Their simplicity makes them ideal for both homes and offices.",
         "content" => "Roller blinds reign as the world's favorite shading solution, boasting endless style and functionality options. Their simplicity makes them ideal for both homes and offices.
-        Our comprehensive product range caters to every roller blind need, from basic to exclusive, ready-made to made-to-measure, and for residential or commercial spaces.
-        Drawing on our expertise as window covering specialists, we offer innovative, in-house designed products developed over years of experience. With insights from global trends and data, we provide all the components necessary to curate your perfect roller blind assortment.",
+
+Our comprehensive product range caters to every roller blind need, from basic to exclusive, ready-made to made-to-measure, and for residential or commercial spaces. Drawing on our expertise as window covering specialists, we offer innovative, in-house designed products developed over years of experience. With insights from global trends and data, we provide all the components necessary to curate your perfect roller blind assortment.",
         "popular" => 0,
         "live" => 1,
         "_lft" => 6,
@@ -97,15 +99,18 @@ As window covering specialists, we draw on years of experience to create innovat
         "parent_id" => 2,
         "deleted_at" => null,
         "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 11:44:37",
+        "updated_at" => "2024-12-26 21:16:25",
     ],
     [
         "id" => 7,
         "title" => "Vertical Blinds",
         "slug" => "vertical-blinds",
-        "description" => "Vertical blinds are making a comeback, offering a chic and trendy window solution perfect for contemporary homes and offices.",
-        "content" => "Vertical blinds are making a comeback, offering a chic and trendy window solution perfect for contemporary homes and offices. Their simplicity complements any window or patio door, with options to part left, right, or split evenly. The clean lines allow precise control over light, privacy, and views.
-Easy to clean and providing excellent insulation, these blinds feature washable fabric strips in 90mm and 127mm widths, along with various colour and texture options, including total block-out PVC. Our patented stainless steel rods ensure long-lasting durability, free from corrosion for years of hassle-free use.",
+        "description" => "Customize your light and privacy preferences with a variety of slats, hardware, and accessories, all coordinated for a cohesive window treatment. ",
+        "content" => "Customize your light and privacy preferences with a variety of slats, hardware, and accessories, all coordinated for a cohesive window treatment. Our Venetian blinds collection provides solutions for any window covering need, from basic to exclusive, for both residential and commercial settings.
+
+As window covering specialists, we draw on years of experience to create innovative products developed in-house by our experts. With insights from global trends and data, we offer everything you need to curate your ideal Venetian blinds assortment.
+
+",
         "popular" => 0,
         "live" => 1,
         "_lft" => 8,
@@ -113,7 +118,7 @@ Easy to clean and providing excellent insulation, these blinds feature washable 
         "parent_id" => 2,
         "deleted_at" => null,
         "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 11:44:39",
+        "updated_at" => "2024-12-26 21:10:19",
     ],
     [
         "id" => 8,
@@ -135,7 +140,9 @@ Easy to clean and providing excellent insulation, these blinds feature washable 
         "title" => "Honeycomb Blinds",
         "slug" => "Honeycomb-blinds",
         "description" => "Optimize energy efficiency with honeycomb blinds, featuring isolating and heat-reflecting qualities.",
-        "content" => "Optimize energy efficiency with honeycomb blinds, featuring isolating and heat-reflecting qualities. Their modern design and functional features make them ideal for any space. Our complete honeycomb solutions, including fabrics, systems, and automation, cater to diverse needs, from basic to exclusive, ready-made to made-to-measure. With years of expertise, we offer innovative products designed in-house to meet global trends and data, ensuring the best assortment for you.",
+        "content" => "Optimize energy efficiency with honeycomb blinds, featuring isolating and heat-reflecting qualities. Their modern design and functional features make them ideal for any space. Our complete honeycomb solutions, including fabrics, systems, and automation, cater to diverse needs, from basic to exclusive, ready-made to made-to-measure. With years of expertise, we offer innovative products designed in-house to meet global trends and data, ensuring the best assortment for you.
+
+",
         "popular" => 0,
         "live" => 1,
         "_lft" => 12,
@@ -143,6 +150,6 @@ Easy to clean and providing excellent insulation, these blinds feature washable 
         "parent_id" => 2,
         "deleted_at" => null,
         "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 11:44:42",
+        "updated_at" => "2024-12-26 21:44:05",
     ]
 ];

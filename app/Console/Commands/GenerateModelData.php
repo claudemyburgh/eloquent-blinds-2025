@@ -28,7 +28,7 @@
         protected $description = 'Generate a file with model data as a multi-dimensional array.';
 
 
-        public function handle()
+        public function handle(): void
         {
             $modelName = $this->argument('model');
             $excludeFields = $this->option('exclude') ? explode(',', $this->option('exclude')) : [];
@@ -46,8 +46,8 @@
 
 
                 // 2. Generate Filename
-                $date = Carbon::now()->format('Y-m-d');
-                $filename = $date . '-' . Str::lower(Str::pluralStudly($modelName)) . '.php';
+                $date = Carbon::now()->format('Y_m_d_His');
+                $filename = $date . '_' . Str::lower(Str::pluralStudly($modelName)) . '.php';
                 $filepath = database_path($filename); // Store in the database directory
 
                 // 3. Fetch and format data

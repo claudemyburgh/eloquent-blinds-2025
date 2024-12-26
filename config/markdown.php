@@ -1,156 +1,181 @@
 <?php
 
-declare(strict_types=1);
-
-/*
- * This file is part of Laravel Markdown.
- *
- * (c) Graham Campbell <hello@gjcampbell.co.uk>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-return [
+    declare(strict_types=1);
 
     /*
-    |--------------------------------------------------------------------------
-    | Enable View Integration
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies if the view integration is enabled so you can write
-    | markdown views and have them rendered as html. The following extensions
-    | are currently supported: ".md", ".md.php", and ".md.blade.php". You may
-    | disable this integration if it is conflicting with another package.
-    |
-    | Default: true
-    |
-    */
+     * This file is part of Laravel Markdown.
+     *
+     * (c) Graham Campbell <hello@gjcampbell.co.uk>
+     *
+     * For the full copyright and license information, please view the LICENSE
+     * file that was distributed with this source code.
+     */
 
-    'views' => true,
+    use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
 
-    /*
-    |--------------------------------------------------------------------------
-    | CommonMark Extensions
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies what extensions will be automatically enabled.
-    | Simply provide your extension class names here.
-    |
-    | Default: [
-    |              League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension::class,
-    |              League\CommonMark\Extension\Table\TableExtension::class,
-    |          ]
-    |
-    */
+    return [
 
-    'extensions' => [
-        League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension::class,
-        League\CommonMark\Extension\Table\TableExtension::class,
-    ],
+        /*
+        |--------------------------------------------------------------------------
+        | Enable View Integration
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies if the view integration is enabled so you can write
+        | markdown views and have them rendered as html. The following extensions
+        | are currently supported: ".md", ".md.php", and ".md.blade.php". You may
+        | disable this integration if it is conflicting with another package.
+        |
+        | Default: true
+        |
+        */
 
-    /*
-    |--------------------------------------------------------------------------
-    | Renderer Configuration
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies an array of options for rendering HTML.
-    |
-    | Default: [
-    |              'block_separator' => "\n",
-    |              'inner_separator' => "\n",
-    |              'soft_break'      => "\n",
-    |          ]
-    |
-    */
+        'views' => true,
 
-    'renderer' => [
-        'block_separator' => "\n",
-        'inner_separator' => "\n",
-        'soft_break'      => "\n",
-    ],
+        'heading_permalink' => [
+            'symbol' => '#',
+            'html_class' => 'inline-block mr-1 no-underline',
+            'title' => 'Permalink',
+            'heading_class' => '',
+        ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Commonmark Configuration
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies an array of options for commonmark.
-    |
-    | Default: [
-    |              'enable_em' => true,
-    |              'enable_strong' => true,
-    |              'use_asterisk' => true,
-    |              'use_underscore' => true,
-    |              'unordered_list_markers' => ['-', '+', '*'],
-    |          ]
-    |
-    */
+        'table_of_contents' => [
+            'html_class' => 'table-of-contents',
+            'position' => 'top',
+            'style' => 'bullet',
+            'min_heading_level' => 1,
+            'max_heading_level' => 6,
+            'normalize' => 'relative',
+            'placeholder' => null,
+        ],
 
-    'commonmark' => [
-        'enable_em'              => true,
-        'enable_strong'          => true,
-        'use_asterisk'           => true,
-        'use_underscore'         => true,
-        'unordered_list_markers' => ['-', '+', '*'],
-    ],
+        /*
+        |--------------------------------------------------------------------------
+        | CommonMark Extensions
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies what extensions will be automatically enabled.
+        | Simply provide your extension class names here.
+        |
+        | Default: [
+        |              League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension::class,
+        |              League\CommonMark\Extension\Table\TableExtension::class,
+        |          ]
+        |
+        */
 
-    /*
-    |--------------------------------------------------------------------------
-    | HTML Input
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies how to handle untrusted HTML input.
-    |
-    | Default: 'strip'
-    |
-    */
+        'extensions' => [
+            GithubFlavoredMarkdownExtension::class,
+            League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension::class,
+            League\CommonMark\Extension\Table\TableExtension::class,
+            League\CommonMark\Extension\Autolink\AutolinkExtension::class,
+//            League\CommonMark\Extension\Strikethrough\StrikethroughExtension::class,
+//            League\CommonMark\Extension\TableOfContents\TableOfContentsExtension::class,
+//            League\CommonMark\Extension\TaskList\TaskListExtension::class,
+        ],
 
-    'html_input' => 'strip',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Allow Unsafe Links
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies whether to allow risky image URLs and links.
-    |
-    | Default: true
-    |
-    */
+        /*
+        |--------------------------------------------------------------------------
+        | Renderer Configuration
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies an array of options for rendering HTML.
+        |
+        | Default: [
+        |              'block_separator' => "\n",
+        |              'inner_separator' => "\n",
+        |              'soft_break'      => "\n",
+        |          ]
+        |
+        */
 
-    'allow_unsafe_links' => true,
+        'renderer' => [
+            'block_separator' => "\n",
+            'inner_separator' => "\n",
+            'soft_break' => "\n",
+        ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Maximum Nesting Level
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies the maximum permitted block nesting level.
-    |
-    | Default: PHP_INT_MAX
-    |
-    */
+        /*
+        |--------------------------------------------------------------------------
+        | Commonmark Configuration
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies an array of options for commonmark.
+        |
+        | Default: [
+        |              'enable_em' => true,
+        |              'enable_strong' => true,
+        |              'use_asterisk' => true,
+        |              'use_underscore' => true,
+        |              'unordered_list_markers' => ['-', '+', '*'],
+        |          ]
+        |
+        */
 
-    'max_nesting_level' => PHP_INT_MAX,
+        'commonmark' => [
+            'enable_em' => true,
+            'enable_strong' => true,
+            'use_asterisk' => true,
+            'use_underscore' => true,
+            'unordered_list_markers' => ['-', '+', '*'],
+        ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Slug Normalizer
-    |--------------------------------------------------------------------------
-    |
-    | This option specifies an array of options for slug normalization.
-    |
-    | Default: [
-    |              'max_length' => 255,
-    |              'unique' => 'document',
-    |          ]
-    |
-    */
+        /*
+        |--------------------------------------------------------------------------
+        | HTML Input
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies how to handle untrusted HTML input.
+        |
+        | Default: 'strip'
+        |
+        */
 
-    'slug_normalizer' => [
-        'max_length' => 255,
-        'unique'     => 'document',
-    ],
+        'html_input' => 'strip',
 
-];
+        /*
+        |--------------------------------------------------------------------------
+        | Allow Unsafe Links
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies whether to allow risky image URLs and links.
+        |
+        | Default: true
+        |
+        */
+
+        'allow_unsafe_links' => true,
+
+        /*
+        |--------------------------------------------------------------------------
+        | Maximum Nesting Level
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies the maximum permitted block nesting level.
+        |
+        | Default: PHP_INT_MAX
+        |
+        */
+
+        'max_nesting_level' => PHP_INT_MAX,
+
+        /*
+        |--------------------------------------------------------------------------
+        | Slug Normalizer
+        |--------------------------------------------------------------------------
+        |
+        | This option specifies an array of options for slug normalization.
+        |
+        | Default: [
+        |              'max_length' => 255,
+        |              'unique' => 'document',
+        |          ]
+        |
+        */
+
+        'slug_normalizer' => [
+            'max_length' => 255,
+            'unique' => 'document',
+        ],
+
+    ];

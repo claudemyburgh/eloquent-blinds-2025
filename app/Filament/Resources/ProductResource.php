@@ -28,6 +28,8 @@
 
         protected static ?string $navigationGroup = 'Blinds & Shutters';
 
+        protected static ?string $recordTitleAttribute = 'title';
+
         public static function form(Form $form): Form
         {
             return $form
@@ -84,7 +86,8 @@
                     Forms\Components\Group::make([
                         Forms\Components\Section::make('Product Status')->schema([
                             Forms\Components\Split::make([
-                                Forms\Components\Toggle::make('live'),
+                                Forms\Components\Toggle::make('live')
+                                    ->default(true),
 
                                 Forms\Components\Toggle::make('popular'),
                             ])
@@ -95,6 +98,7 @@
                                 ->native(false)
                                 ->searchable()
                                 ->required()
+                                ->default(Availability::AVAILABLE)
                                 ->options(Arr::sort(Availability::options())),
 
                             Forms\Components\Select::make('guarantee')
@@ -122,48 +126,60 @@
             return $table
                 ->columns([
                     Tables\Columns\TextColumn::make('category.title')
+                        ->sortable()
                         ->numeric()
                         ->sortable(),
 
                     Tables\Columns\TextColumn::make('title')
+                        ->sortable()
                         ->searchable(),
 
                     Tables\Columns\TextColumn::make('slug')
+                        ->sortable()
                         ->searchable(),
 
                     Tables\Columns\TextColumn::make('guarantee')
+                        ->sortable()
                         ->toggleable(isToggledHiddenByDefault: true)
                         ->searchable(),
 
                     Tables\Columns\TextColumn::make('supplier')
                         ->toggleable(isToggledHiddenByDefault: true)
+                        ->sortable()
                         ->searchable(),
 
                     Tables\Columns\TextColumn::make('supplier_code')
                         ->toggleable(isToggledHiddenByDefault: true)
+                        ->sortable()
                         ->searchable(),
 
                     Tables\Columns\TextColumn::make('availability')
                         ->toggleable(isToggledHiddenByDefault: true)
+                        ->sortable()
                         ->searchable(),
 
-                    Tables\Columns\ToggleColumn::make('live'),
+                    Tables\Columns\ToggleColumn::make('live')
+                        ->sortable(),
 
                     Tables\Columns\IconColumn::make('popular')
                         ->toggleable(isToggledHiddenByDefault: true)
+                        ->sortable()
                         ->boolean(),
 
                     Tables\Columns\TextColumn::make('deleted_at')
+                        ->sortable()
                         ->dateTime()
                         ->sortable()
                         ->toggleable(isToggledHiddenByDefault: true),
 
                     Tables\Columns\TextColumn::make('created_at')
+                        ->sortable()
                         ->dateTime()
                         ->sortable()
                         ->toggleable(isToggledHiddenByDefault: true),
 
                     Tables\Columns\TextColumn::make('updated_at')
+                        ->sortable()
                         ->dateTime()
                         ->sortable()
                         ->toggleable(isToggledHiddenByDefault: true),

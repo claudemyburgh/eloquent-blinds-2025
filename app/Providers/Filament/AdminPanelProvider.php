@@ -17,7 +17,6 @@
     use Illuminate\Routing\Middleware\SubstituteBindings;
     use Illuminate\Session\Middleware\StartSession;
     use Illuminate\View\Middleware\ShareErrorsFromSession;
-    use pxlrbt\FilamentSpotlight\SpotlightPlugin;
 
 
     class AdminPanelProvider extends PanelProvider
@@ -40,7 +39,7 @@
                     Pages\Dashboard::class,
                 ])
                 ->plugins([
-                    SpotlightPlugin::make(),
+
                 ])
                 ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
                 ->widgets([
