@@ -6,7 +6,12 @@
 
     <title>Laravel</title>
 
-    <!-- Fonts -->
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800,900&display=swap" rel="stylesheet"/>
@@ -23,19 +28,13 @@
 <main id="main" @class(['my-20 flex-1'])>
     {{ $slot }}
 </main>
-
-
 <x-cta.blinds/>
 <x-marquee.full></x-marquee.full>
-
-
 @if(Route::currentRouteName() !== 'quote.index')
     <div class="wrapper">
         <x-contact.section/>
     </div>
 @endif
-
-
 <x-footer/>
 <!-- Scripts -->
 @livewireScripts
