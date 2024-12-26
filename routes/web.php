@@ -22,7 +22,6 @@
     Route::get('/categories', CategoriesIndexController::class)->name('categories.index');
     Route::get('/categories/{category:slug}', CategoriesShowController::class)->name('categories.show');
 
-    Route::get('/products', ProductsIndexController::class)->name('products.index');
     Route::get('/{category:slug}/{product:slug}', ProductsShowController::class)->name('products.show');
 
 

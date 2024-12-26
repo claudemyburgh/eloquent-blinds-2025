@@ -6,6 +6,8 @@
 @import "link.css";
 @import "panel.css";
 @import "text-and-heading.css";
+@import "splide.css";
+@import "swiper.css";
 
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';

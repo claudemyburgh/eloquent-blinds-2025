@@ -84,17 +84,25 @@
             $builder->supplier(Supplier::QUANTUM);
         }
 
+        /**
+         * @param \Spatie\MediaLibrary\MediaCollections\Models\Media|null $media
+         *
+         * @return void
+         */
         public function registerMediaConversions(?Media $media = null): void
         {
             foreach (config('image-conversion.default') as $key => $image) {
                 $this->addMediaConversion($key)
                     ->format($image['format'])
-                    ->blur($image['blur'])
+//                    ->blur($image['blur'])
                     ->fit(Fit::Max, $image['height'], $image['height'])
                     ->nonQueued();
             }
         }
 
+        /**
+         * @return void
+         */
         public function registerMediaCollections(): void
         {
             $this->addMediaCollection('products')

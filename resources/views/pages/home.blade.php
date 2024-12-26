@@ -28,8 +28,7 @@
             <div class="grid grid-cols-2 gap-6">
                 @if($products)
                     @foreach($products as $product)
-                        {{--                        <x-product.card class="col-span-1" :product="$product"--}}
-                        {{--                                        route="{{ route('products.show', [$product->category, $product]) }}"/>--}}
+                        <x-product.card :product="$product" route="{{ route('products.show', [$product->category, $product]) }}"/>
                     @endforeach
                 @endif
             </div>

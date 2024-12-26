@@ -1,6 +1,12 @@
 {
+  "node_modules/.pnpm/photoswipe@5.4.4/node_modules/photoswipe/dist/photoswipe.esm.js": {
+    "file": "assets/photoswipe.esm-GXRgw7eJ.js",
+    "name": "photoswipe.esm",
+    "src": "node_modules/.pnpm/photoswipe@5.4.4/node_modules/photoswipe/dist/photoswipe.esm.js",
+    "isDynamicEntry": true
+  },
   "resources/css/app.css": {
-    "file": "assets/app-B6VOyznI.css",
+    "file": "assets/app-D716K6Ot.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -109,12 +115,15 @@
     "src": "resources/img/zebra-blinds.webp"
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-C-GPP_M9.js",
+    "file": "assets/app-BXGIkOEv.js",
     "name": "app",
     "src": "resources/ts/app.ts",
     "isEntry": true,
+    "dynamicImports": [
+      "node_modules/.pnpm/photoswipe@5.4.4/node_modules/photoswipe/dist/photoswipe.esm.js"
+    ],
     "css": [
-      "assets/app-DMqL9CFT.css"
+      "assets/app-cPPnkASS.css"
     ]
   }
 }

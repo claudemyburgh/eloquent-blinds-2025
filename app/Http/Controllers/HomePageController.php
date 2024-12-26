@@ -14,13 +14,10 @@
          */
         public function __invoke(): View
         {
-
-//            $categories = Category::live()->with('products', fn ($query) => $query->taylor()->live())->get()->toTree();
-//            return $categories->where('slug', 'shutters');
-
-
             return view('pages.home', [
-                'products' => Cache::remember('home-products', 5, fn () => Product::with('media', 'category')->where('popular', 1)->limit(4)->get()),
+                'products' => Cache::remember('home-products', config('cache.time_to_life'), function () {
+                    return Product::with('media', 'category')->where('popular', 1)->limit(4)->get();
+                }),
             ]);
         }
     }

@@ -4,17 +4,21 @@
 
     use App\Http\Controllers\Controller;
     use App\Models\Category;
-    use Illuminate\View\View;
+    use Illuminate\Support\Facades\Cache;
 
     class CategoriesIndexController extends Controller
     {
         /**
          * Handle the incoming request.
          */
-        public function __invoke(Category $categories): View
+        public function __invoke(Category $categories)
         {
             return view('pages.categories.index', [
-                'categories' => $categories->live()->get()->toTree()
+                'categories' => Cache::remember('categories',
+                    config('cache.time_to_life'),
+                    function () use ($categories) {
+                        return $categories->live()->with('media', 'products.media')->get()->toTree();
+                    }),
             ]);
         }
     }

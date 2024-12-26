@@ -11,7 +11,7 @@
             We’d love to hear from you! Send us a message via email, whatapp or simply give us a call.
         </p>
         @if(Route::currentRouteName() !== 'quote.index')
-            <a href="{{ route('quote.index') }}" class="btn mt-4 btn-gradient px-6 py-4 text-white self-start">
+            <a wire:navigate href="{{ route('quote.index') }}" class="btn mt-4 btn-gradient px-6 py-4 text-white self-start">
                 <span>Contact Us</span>
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                      stroke-width="1.5" stroke="currentColor" class="h-5 w-5 ml-2">
@@ -21,10 +21,7 @@
             </a>
         @endif
     </header>
-
     @foreach(config('contact-details.users') as $user)
         <x-contact.card :name="$user['name']" :phone="$user['phone']" :email="$user['email']" :image="$user['image']"/>
     @endforeach
-
-
 </section>

@@ -63,6 +63,10 @@
     "compilerOptions": {
         "target": "es5",
         "module": "es2020",
+        "lib": [
+            "dom",
+            "es2015"
+        ],
         "moduleResolution": "node",
         "baseUrl": "./",
         "strict": true,

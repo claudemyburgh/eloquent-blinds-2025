@@ -21,9 +21,7 @@
 With our Security Shutters, say goodbye to traditional burglar bars and security gates. Our customizable range fits a variety of door and window formats and is available in a selection of finishes to complement your aesthetic.',
                     'popular' => (bool)false,
                     'live' => (bool)true,
-                    "children" => [
 
-                    ]
                 ],
                 [
                     'title' => 'Indoor Blinds',
@@ -34,9 +32,7 @@ With our Security Shutters, say goodbye to traditional burglar bars and security
                 ',
                     'popular' => (bool)false,
                     'live' => (bool)true,
-                    'children' => [
 
-                    ]
                 ],
                 [
                     'title' => 'Outdoor Blinds',
@@ -44,9 +40,7 @@ With our Security Shutters, say goodbye to traditional burglar bars and security
                     'description' => 'Outdoor blinds can provide protection from sun, wind and rain, and can be controlled manually or with motorization. They come in various styles, such as roll-up, retractable, or fixed, and can be a great addition to any outdoor living space',
                     'content' => 'Outdoor blinds can provide protection from sun, wind and rain, and can be controlled manually or with motorization. They come in various styles, such as roll-up, retractable, or fixed, and can be a great addition to any outdoor living space',
                     'live' => false,
-                    'children' => [
 
-                    ]
                 ],
                 [
                     'title' => 'Motion Blinds',
@@ -57,9 +51,7 @@ With our Security Shutters, say goodbye to traditional burglar bars and security
 Discover our standout Eve MotionBlinds series, featuring battery-powered motors with Apple HomeKit integration. Developed in collaboration with Eve Systems, a renowned leader in the smart home industry, it brings unparalleled convenience to your living spaces.',
                     'popular' => (bool)false,
                     'live' => (bool)true,
-                    'children' => [
 
-                    ]
                 ],
 
                 // Venetian Blinds
@@ -71,9 +63,7 @@ Discover our standout Eve MotionBlinds series, featuring battery-powered motors 
 As window covering specialists, we draw on years of experience to create innovative products developed in-house by our experts. With insights from global trends and data, we offer everything you need to curate your ideal Venetian blinds assortment.',
                     'popular' => (bool)false,
                     'live' => (bool)true,
-                    'children' => [
 
-                    ]
                 ],
 
                 [
@@ -85,9 +75,7 @@ As window covering specialists, we draw on years of experience to create innovat
         Drawing on our expertise as window covering specialists, we offer innovative, in-house designed products developed over years of experience. With insights from global trends and data, we provide all the components necessary to curate your perfect roller blind assortment.',
                     'popular' => (bool)false,
                     'live' => (bool)true,
-                    'children' => [
 
-                    ]
                 ],
 
                 [
@@ -98,9 +86,7 @@ As window covering specialists, we draw on years of experience to create innovat
 Easy to clean and providing excellent insulation, these blinds feature washable fabric strips in 90mm and 127mm widths, along with various colour and texture options, including total block-out PVC. Our patented stainless steel rods ensure long-lasting durability, free from corrosion for years of hassle-free use.',
                     'popular' => (bool)false,
                     'live' => (bool)true,
-                    'children' => [
 
-                    ]
                 ],
                 [
                     'title' => 'Zebra Blinds',
@@ -109,9 +95,7 @@ Easy to clean and providing excellent insulation, these blinds feature washable 
                     'content' => 'Craft an enchanting ambiance with our Zebra blinds collection, delicately filtering light to create intimacy. By blending transparent and closed stripes, you can effortlessly control the desired lighting effect. With a wide array of fabric options, including plain, jacquards, and nature-inspired materials, in both transparent and blackout qualities, Zebra blinds offer limitless decorative opportunities. From light, natural hues to warm and cheerful tones, our collection complements both modern and rustic interiors seamlessly.',
                     'popular' => (bool)false,
                     'live' => (bool)true,
-                    'children' => [
 
-                    ]
                 ],
 
                 [
@@ -121,14 +105,14 @@ Easy to clean and providing excellent insulation, these blinds feature washable 
                     'content' => 'Optimize energy efficiency with honeycomb blinds, featuring isolating and heat-reflecting qualities. Their modern design and functional features make them ideal for any space. Our complete honeycomb solutions, including fabrics, systems, and automation, cater to diverse needs, from basic to exclusive, ready-made to made-to-measure. With years of expertise, we offer innovative products designed in-house to meet global trends and data, ensuring the best assortment for you.',
                     'popular' => (bool)false,
                     'live' => (bool)true,
-                    'children' => [
 
-                    ]
                 ],
 
             ];
 
-            foreach ($categories as $category) {
+            $categoriesAll = require_once __DIR__ . '/../2024-12-26-categories.php';
+
+            foreach ($categoriesAll as $category) {
                 Category::create($category);
             }
         }

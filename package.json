@@ -11,6 +11,7 @@
         "@tailwindcss/forms": "^0.5.9",
         "@tailwindcss/postcss": "4.0.0-beta.8",
         "@tailwindcss/typography": "^0.5.15",
+        "@types/photoswipe": "^4.1.6",
         "axios": "^1.7.9",
         "concurrently": "^9.1.0",
         "laravel-vite-plugin": "^1.1.1",
@@ -25,6 +26,8 @@
         "@splidejs/splide": "^4.1.4",
         "@splidejs/splide-extension-auto-scroll": "^0.5.3",
         "@tailwindcss/container-queries": "^0.1.1",
+        "canvas-confetti": "^1.9.3",
+        "photoswipe": "^5.4.4",
         "vanilla-headless": "^0.10.1"
     }
 }

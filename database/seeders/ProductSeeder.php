@@ -12,11 +12,10 @@
          */
         public function run(): void
         {
-            $productsOld = [
+            $products = [
                 [
                     'title' => 'Nairobi', //1
                     'slug' => 'nairobi', //1
-                    'category_id' => 8,
                     'description' => 'The Nairobi fabric boasts of its natural and one-of-a-kind texture and color variations, which gives a sense of purity to any interior space. Its generous width makes it perfect for larger windows and various other uses.',
                     'content' => 'Transform the look of your home with the Nairobi roller blinds. These roller shades are not just any ordinary window covering, they are made with a unique fabric that boasts a captivating texture and color variation. This makes them the ideal solution for adding a touch of natural purity to any interior space. The generous width of the Nairobi fabric used for these roller blinds makes them an excellent choice for larger windows or any other use you can imagine.
 
@@ -25,7 +24,6 @@ These rollup blinds provide an effortless way to control light and privacy in yo
                 [
                     'title' => 'Waving Leave', //2
                     'slug' => 'waving-leave', //2
-                    'category_id' => 8,
                     'description' => 'The intricate and delicate leaves and flowers come to life on printed and jacquards woven fabrics that are in soft pastel colors, giving a romantic and gentle appeal that exudes femininity.',
                     'content' => 'The intricate and delicate leaves and flowers come to life in the form of soft pastel colored printed and jacquard woven fabrics that are used for roller blinds and fabric blinds. These window coverings exude femininity with their gentle and romantic appeal, making them a standout choice for any interior space. The use of soft pastel colors creates a visually stunning effect, adding a touch of elegance and sophistication to any room.
 
@@ -34,7 +32,6 @@ Whether used for curtains, upholstery, or other home textiles, these rollup blin
                 [
                     'title' => 'Essential 3000 10%', //3
                     'slug' => 'essential-3000-10%', //3
-                    'category_id' => 8,
                     'description' => 'Screen 3010 is a fabric made of polyester featuring a delicate 2 x 2 basket weave structure, that provides a subtle texture while still allowing for a clear view through.',
                     'content' => "Essential 3000 10% is a premium quality fabric made of durable polyester and featuring a distinctive 2 x 2 basket weave structure. This unique design offers a delicate texture that provides a subtle touch to any interior space, while still allowing for a clear view through the fabric. This makes Essential 3000 10% an ideal choice for roller blinds, fabric blinds, and roller shades, where you want to maintain a connection to the outside world while still controlling light and privacy.
 
@@ -45,7 +42,6 @@ The versatility of this window covering fabric makes it suitable for a range of 
                 [
                     'title' => 'Essential 4000 5%', //4
                     'slug' => 'essential-4000-5%', //4
-                    'category_id' => 8,
                     'description' => 'Screen 4005, made of polyester, has a delicate 2 x 2 basket weave structure that provides a subtle texture while allowing only 5% visibility, making it perfect for privacy needs',
                     'content' => "The Essential 4000 5% fabric blinds are a popular choice for those in need of a window covering solution that provides ample privacy. Made from durable polyester, these roller shades feature a delicate 2 x 2 basket weave structure that not only adds a subtle texture to the appearance, but also restricts visibility to just 5%.
 
@@ -54,7 +50,6 @@ The versatility of this window covering fabric makes it suitable for a range of 
                 [
                     'title' => 'Mombassa Light Filtering', //5
                     'slug' => 'mombassa-light-filtering', //5
-                    'category_id' => 8,
                     'description' => 'The Mombassa LF collection features a contemporary design and a tactile sensation. Its natural fabrics provide a cozy ambiance in any room, and the soft color scheme adds a touch of sophistication to the space.',
                     'content' => "The Mombassa Light Filtering collection is a sophisticated and contemporary line of window coverings that provides a warm and cozy ambiance to any room. This collection features roller blinds and fabric blinds, also known as roller shades, which are an ideal solution for those looking for a stylish and functional window covering.
 
@@ -65,7 +60,6 @@ The versatility of this window covering fabric makes it suitable for a range of 
                 [
                     'title' => 'Proto', //6
                     'slug' => 'proto', //6
-                    'category_id' => 8,
                     'description' => 'The Prato collection features modern, light-filtering fabrics made from recycled yarns and available in a variety of popular colors. It gives an aesthetic look with an eco-friendly touch.',
                     'content' => 'The Prato collection is a modern and eco-conscious line of window coverings that seamlessly blends style and sustainability. This collection features roller blinds and fabric blinds, also known as roller shades, that are designed to enhance the look of any room while also being environmentally friendly.
 
@@ -76,7 +70,6 @@ These rollup blinds are the perfect solution for those looking for a functional 
                 [
                     'title' => 'Berlin', //7
                     'slug' => 'berlin', //7
-                    'category_id' => 8,
                     'description' => 'The Berlin collection presents fabrics that completely block out daylight with a robust, durable textile appearance. The material provides complete darkness and privacy, and the collection is perfect for creating a cozy and secluded ambiance.',
                     'content' => "The Berlin collection is a line of highly durable and functional window coverings designed for complete darkness and privacy. Featuring roller blinds and fabric blinds, also known as roller shades, this collection is perfect for creating a cozy and secluded ambiance in any room.
 
@@ -87,7 +80,6 @@ Whether you're looking for a solution for your bedroom or office, the Berlin col
                 [
                     'title' => 'Mombassa Block-Out', //8
                     'slug' => 'mombassa-block-out', //8
-                    'category_id' => 8,
                     'content' => "The Mombassa Block-out collection is a stylish and modern line of window coverings that boasts of a modern aesthetic and a pleasant texture. The collection features roller blinds and fabric blinds, also known as roller shades, that are made from naturally delicate fabrics, resulting in a warm and inviting atmosphere in any setting.
 
 The soft color palette of these rollup blinds adds a touch of elegance to any interior, making them the perfect choice for anyone who wants to enhance the look and feel of their space while also enjoying complete block-out capabilities. Whether you're looking for a solution for your bedroom or office, the Mombassa Block-out collection has everything you need to create a peaceful and tranquil environment with its block-out properties, while also adding a touch of sophistication to your decor with its modern and stylish design.",
@@ -95,7 +87,6 @@ The soft color palette of these rollup blinds adds a touch of elegance to any in
                 [
                     'title' => 'Yamar', //9
                     'slug' => 'yamar', //9
-                    'category_id' => 8,
                     'description' => 'The Yamar collection features roller blind fabrics with a textured appearance, which adds a modern aesthetic. The collection comes in a range of neutral color tones.',
                     'content' => "The Yamar collection is a line of modern and sophisticated roller blinds that feature textured fabrics for a unique and stylish touch. These roller blinds, also known as fabric blinds or roller shades, are available in a range of neutral color tones, making them the perfect choice for anyone looking for versatility in their window covering options.
 
@@ -106,7 +97,6 @@ Whether you're looking to add a touch of sophistication to your bedroom, office,
                 [
                     'title' => 'Satin Flower', //10
                     'slug' => 'satin-flower', //10
-                    'category_id' => 8,
                     'description' => 'Printed and jacquard woven fabrics feature intricate leaf and flower designs that bring a sense of liveliness. The soft pastel colors used in the fabrics create a pure and gentle atmosphere in the interior.',
                     'content' => 'Roller blinds, fabric blinds, roller shades, and other types of rollup blinds can play a vital role in elevating the aesthetics of a room. These window coverings come in a range of designs, colors, and patterns that are perfect for adding depth and character to any interior space.
 
@@ -117,7 +107,6 @@ To create a pure and gentle atmosphere, designers often choose soft pastel color
                 [
                     'title' => 'Skyros', //10
                     'slug' => 'skyros', //10
-                    'category_id' => 10,
                     'description' => 'The delicately woven structure and subtle satin gloss of these double roller fabrics brings a feeling of elegance to the interior.',
                     'content' => 'The delicate weave and subtle satin gloss of these roller blinds, also known as fabric blinds or roller shades, make them a perfect choice for a sophisticated window covering solution. These roll-up blinds bring a touch of elegance to any interior, with their sleek and refined appearance.
 
@@ -126,7 +115,6 @@ The Skyros zebra blind, in particular, is a standout product in this category, o
                 [
                     'title' => 'Zakynthos', //10
                     'slug' => 'zakynthos', //10
-                    'category_id' => 10,
                     'description' => 'The refined silk-look texture of these double roller fabrics adds zest and makes the colors pop-out. The open weaving texture of the transparent stripes give the fabrics an o en feel.',
                     'content' => 'The Zakynthos zebra blinds are a luxurious and stylish window covering solution for any interior design. Made from high-quality double roller fabrics, these roller blinds, also known as fabric blinds or roller shades, have a refined silk-look texture that adds a touch of glamour to your decor. The colors of the fabric pop out, bringing a new level of energy to the room. The open weaving texture of the transparent stripes in the Zakynthos zebra blinds gives the fabrics a light and airy feel, creating an illusion of spaciousness and making the most of natural light.
 
@@ -135,7 +123,6 @@ These zebra blinds are a unique and sophisticated way to add a touch of elegance
                 [
                     'title' => 'Palma Light Filtering', //10
                     'slug' => 'palma-light-filtering', //10
-                    'category_id' => 7,
 
                     'description' => 'Create a pure atmosphere with the delicate light filtering and block-out fabrics in this collection. The refined plain fabrics in the Palma collection are available in 25 mm and 45 mm.',
 
@@ -146,7 +133,6 @@ The collection features sophisticated plain fabrics that come in two sizes, 25mm
                 [
                     'title' => 'Palma Block-Out', //10
                     'slug' => 'palma-block-out', //10
-                    'category_id' => 7,
 
                     'description' => 'Create a pure atmosphere with the delicate light filtering and block-out fabrics in this collection. The refined plain fabrics in the Palma collection are available in 25 mm and 45 mm.',
 
@@ -154,16 +140,12 @@ The collection features sophisticated plain fabrics that come in two sizes, 25mm
 
 Whether you're looking to create a calming and restful bedroom or a focused and productive workspace, the Palma collection has the block-out roller blinds, fabric blinds, and roller shades you need to achieve your desired atmosphere. So if you're looking for high-quality, attractive window coverings that can transform your interior space, consider the pure and refined fabrics in the Palma collection.",
                 ],
-            ];
-
-            $products = [
                 [
                     'title' => 'ShutterGuard® Aluminium Security Shutters',
                     'slug' => 'shutterguard-aluminium-security-shutters',
                     'description' => 'Upgrade your windows or doors with our sleek and secure aluminum shutters. These folding, louvred shutters offer both style and safety, enhancing the aesthetics of your home, commercial, or retail space while providing security.',
                     'content' => 'Upgrade your windows or doors with our sleek and secure aluminum shutters. These folding, louvred shutters offer both style and safety, enhancing the aesthetics of your home, commercial, or retail space while providing security.
                     Control light, noise, and temperature with ease, while our patented gear lock ensures steadfast protection. Our unique locking systems, including Cisa and Boltfix, offer added security with a specialized key. Plus, optional double-sided locks are available upon request for added peace of mind.',
-                    'category_id' => 1,
                     'popular' => (bool)true,
                     'live' => (bool)true,
                 ],
@@ -172,7 +154,6 @@ Whether you're looking to create a calming and restful bedroom or a focused and 
                     'slug' => 'shutterstyle-aluminium-barrier-security-shutters',
                     'description' => 'Elevate your space with our stylish and secure ShutterStyle® Shutters, designed for the fashion-forward and security-conscious.',
                     'content' => 'Elevate your space with our stylish and secure ShutterStyle® Shutters, designed for the fashion-forward and security-conscious. With six years of refinement, our shutters boast the Taylor seal of quality, offering premium style and affordability. Featuring a 60mm bolt and sleek slide action with a push-lock system, they blend beauty with functionality. Crafted from slim yet durable aluminum, our shutters are suitable for indoor and outdoor use, offering modular track options, a cutting-edge light-blocking system, and seamless lines.',
-                    'category_id' => 1,
                     'popular' => (bool)true,
                     'live' => (bool)true,
                 ],
@@ -181,7 +162,6 @@ Whether you're looking to create a calming and restful bedroom or a focused and 
                     'slug' => 'hurricane-aluminium-shutters',
                     'description' => 'Our hurricane shutters provide protection during storms and allow sunlight to brighten your days.',
                     'content' => 'Our hurricane shutters provide protection during storms and allow sunlight to brighten your days. Originally designed for storm protection without sacrificing aesthetics, these stylish aluminium shutters are perfect for homes and offices. Functional, durable, rustproof, and easy to clean, they come with warranties of up to 10 years. With folding louvres, they open up spaces while controlling light, noise, and temperature. Note: Hurricane shutters are not intended as a security solution.',
-                    'category_id' => 1,
                     'popular' => (bool)false,
                     'live' => (bool)true,
                 ],
@@ -190,7 +170,6 @@ Whether you're looking to create a calming and restful bedroom or a focused and 
                     'slug' => 'thermowood-shutters',
                     'description' => 'Experience the perfect blend of natural light and privacy with Thermowood® Shutters.',
                     'content' => 'Experience the perfect blend of natural light and privacy with Thermowood® Shutters. These custom-made louvre door shutters are crafted from durable, engineered PVC for longevity. Tested under various conditions, they come with a 3-year warranty for peace of mind. Enhance modern living with retractable stacking shutters, seamlessly merging indoor and outdoor spaces for an extended living area.',
-                    'category_id' => 1,
                     'popular' => (bool)false,
                     'live' => (bool)true,
                 ],
@@ -199,14 +178,15 @@ Whether you're looking to create a calming and restful bedroom or a focused and 
                     'slug' => 'timber-wood-shutters',
                     'description' => 'Discover our Timber Wood Shutters: solid, affordable, and stunning.',
                     'content' => 'Discover our Timber Wood Shutters: solid, affordable, and stunning. Crafted in South Africa from hand-selected timber, they offer both style and functionality for indoor and outdoor use. With components up to 30% thicker than imports, they\'re built to last and backed by a 5-year warranty, maintaining our reputation for quality. Choose from standard or custom configurations to suit any design need, from circular to triangular shapes, offering unparalleled flexibility',
-                    'category_id' => 1,
                     'popular' => (bool)false,
                     'live' => (bool)true,
                 ],
-
             ];
 
-            foreach ($products as $product) {
+
+            $productsAll = require __DIR__ . '/../2024-12-26-products.php';
+
+            foreach ($productsAll as $product) {
                 Product::create($product);
             }
         }
