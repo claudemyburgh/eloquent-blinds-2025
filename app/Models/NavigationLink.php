@@ -49,7 +49,7 @@
                 'dropdown' => false,
             ],
             [
-                "name" => "Quote",
+                "name" => "Free Quote",
                 "slug" => "quote",
                 "route" => self::QUOTE_PAGE_ROUTE,
                 "classes" => "btn btn-gradient text-white ",

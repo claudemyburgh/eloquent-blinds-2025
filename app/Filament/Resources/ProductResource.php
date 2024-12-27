@@ -26,9 +26,14 @@
 
         protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+        protected static ?string $recordTitleAttribute = 'title';
         protected static ?string $navigationGroup = 'Blinds & Shutters';
 
-        protected static ?string $recordTitleAttribute = 'title';
+        public static function getGloballySearchableAttributes(): array
+        {
+            return ['title', 'content'];
+        }
+
 
         public static function form(Form $form): Form
         {

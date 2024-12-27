@@ -21,9 +21,15 @@
         protected static ?string $model = Category::class;
 
         protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-
         protected static ?string $navigationGroup = 'Blinds & Shutters';
+
+
+        protected static ?string $recordTitleAttribute = 'title';
+
+        public static function getGloballySearchableAttributes(): array
+        {
+            return ['title', 'description'];
+        }
 
         public static function form(Form $form): Form
         {
