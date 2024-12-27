@@ -30,7 +30,7 @@
                 <div class="grid grid-cols-12 gap-6">
                     <div class="col-span-12">
                         <h3 class="heading-3 text-shadow-[5] text-shadow-primary-500/10 dark:text-shadow-black">
-                            {{ $category->products->count() }} {{ Str::plural('Product', $category->products->count()) }} in category {{ $category->title }}
+                            {{ $category->products->count() }} {{ Str::plural('Product', $category->products->count()) }} in {{ $category->title }} category
                         </h3>
                     </div>
                     @foreach($category->products as $product)
