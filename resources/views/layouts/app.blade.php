@@ -21,8 +21,9 @@
     @filamentStyles
     @vite(['resources/css/app.css', 'resources/ts/app.ts'])
 </head>
-<body class="font-sans antialiased bg-white overflow-x-clip text-gray-800 dark:bg-gray-900 dark:text-gray-300 flex flex-col h-full">
+<body class="font-sans  antialiased bg-white overflow-x-clip text-gray-800 dark:bg-gray-900 dark:text-gray-300 flex flex-col h-full">
 <x-app::skip/>
+
 <x-patterns.grid class="h-100 fixed top-0 inset-x-0 z-0"/>
 <x-navigation/>
 <main id="main" @class(['my-20 flex-1'])>
