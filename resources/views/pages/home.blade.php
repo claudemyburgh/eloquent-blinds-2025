@@ -25,10 +25,10 @@
             </div>
         </div>
         <div class="md:col-span-12 lg:col-span-6">
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-6">
                 @if($products)
                     @foreach($products as $product)
-                        <x-product.card :product="$product" route="{{ route('products.show', [$product->category, $product]) }}"/>
+                        <x-product.card class="md:[&:nth-child(3)]:hidden lg:[&:nth-child(3)]:flex" :product="$product" route="{{ route('products.show', [$product->category, $product]) }}"/>
                     @endforeach
                 @endif
             </div>

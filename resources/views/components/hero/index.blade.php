@@ -1,5 +1,5 @@
 <div class="wrapper lg:my-12 grid grid-cols-1 lg:grid-cols-5 relative z-10">
-    <div class="lg:col-span-3 relative z-10 space-y-4">
+    <div class="lg:col-span-3  z-10 space-y-4">
         <div class="mt-24 sm:mt-32 lg:mt-16">
             <a href="https://view.publitas.com/e-books/quantum-signature/page/1" target="_blank"
                class="inline-flex space-x-4">
@@ -48,9 +48,9 @@
 
     <mouse-spotlight
         data-mouse-light="rgba(250,250,250,.5)"
-        class="bg-gradient-to-br block rounded-default from-primary-500 to-secondary-400 opacity-15 lg:opacity-100 w-full lg:w-[175%] absolute lg:relative  aspect-3/2 lg:col-span-2 bg-gray-500 rounded-default !lg:mask">
+        class="bg-gradient-to-br block  from-primary-500 to-secondary-400 opacity-95 lg:opacity-100 w-full lg:w-[175%]  lg:relative  aspect-3/2 lg:col-span-2  rounded-default absolute -top-20 lg:top-0 p-1 mask-image-b lg:mask-image-start-100">
         <img width="1037" height="613" loading="eager"
-             class="w-full aspect-3/2 object-cover min-w-full max-h-full rounded-default block"
+             class="w-full aspect-3/2  object-cover  max-h-full rounded-default block"
              src="{{ Vite::asset('resources/img/hero.webp') }}" alt="hero blind image">
     </mouse-spotlight>
 

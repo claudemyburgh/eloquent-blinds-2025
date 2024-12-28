@@ -6,7 +6,7 @@
     "isDynamicEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app-QB3NK9Qv.css",
+    "file": "assets/app-DKV0OkpD.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -115,7 +115,7 @@
     "src": "resources/img/zebra-blinds.webp"
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-80CNoSTF.js",
+    "file": "assets/app-5SQh1zQg.js",
     "name": "app",
     "src": "resources/ts/app.ts",
     "isEntry": true,

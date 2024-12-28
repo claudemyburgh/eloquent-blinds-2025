@@ -1,6 +1,6 @@
 <li>
     <a {{ $attributes->merge([
-    'class' => 'hover-underline text-red-400 dark:text-white/50 inline-flex items-center space-x-2'
+    'class' => 'hover-underline w-full text-gray-400 dark:text-white/50 flex items-center space-x-2'
 ]) }}>
         {{ $slot }}
     </a>

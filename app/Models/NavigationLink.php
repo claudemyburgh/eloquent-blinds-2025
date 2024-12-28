@@ -13,6 +13,8 @@
         const ABOUT_PAGE_ROUTE = "about";
         const QUOTE_PAGE_ROUTE = "quote.index";
 
+        const FAQS_PAGE_ROUTE = "faqs.index";
+
         const SHUTTER_PAGE_ROUT = "";
 
         protected array $rows = [
@@ -41,9 +43,9 @@
                 "dropdown" => true,
             ],
             [
-                "name" => "About Us",
-                "slug" => "about-us",
-                "route" => self::ABOUT_PAGE_ROUTE,
+                "name" => "Faq's",
+                "slug" => "faqs",
+                "route" => self::FAQS_PAGE_ROUTE,
                 "classes" => "hover:text-primary-500 dark:text-shadow ",
                 "visible" => true,
                 'dropdown' => false,

@@ -6,11 +6,7 @@
 
     <title>{{ $title ??= config('app.name') }}</title>
 
-    <!-- favicons -->
-    {{--    <link rel="apple-touch-icon" sizes="180x180" href="{{ public_path('apple-touch-icon.png') }}">--}}
-    {{--    <link rel="icon" type="image/png" sizes="32x32" href="{{ public_path('favicon-32x32.png') }}">--}}
-    {{--    <link rel="icon" type="image/png" sizes="16x16" href="{{ public_path('favicon-16x16.png') }}">--}}
-    {{--    <link rel="manifest" href="{{ public_path('site.webmanifest') }}">--}}
+
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -26,7 +22,7 @@
     @filamentStyles
     @vite(['resources/css/app.css', 'resources/ts/app.ts'])
 </head>
-<body class="font-sans  antialiased bg-white overflow-x-clip text-gray-800 dark:bg-gray-900 dark:text-gray-300 flex flex-col h-full">
+<body class="font-sans accent-pink-500 antialiased bg-white overflow-x-clip text-gray-800 dark:bg-gray-900 dark:text-gray-300 flex flex-col h-full">
 <x-app::skip/>
 
 <x-patterns.grid class="h-100 fixed top-0 inset-x-0 z-0"/>
