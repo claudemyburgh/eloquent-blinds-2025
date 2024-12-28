@@ -1,3 +1,6 @@
-@utility hover-underline {
-    @apply hover:underline underline-offset-8 decoration-wavy isolate z-10 decoration-gray-300/10 hover:decoration-primary-500 decoration-1 inline-block relative;
+@layer utilities {
+    .hover-underline {
+        @apply hover:underline underline-offset-8 decoration-wavy isolate z-10 decoration-gray-300/10 hover:decoration-primary-500 decoration-1 inline-block relative;
+    }
+
 }

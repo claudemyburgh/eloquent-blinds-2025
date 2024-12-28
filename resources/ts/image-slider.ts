@@ -1,4 +1,5 @@
 import { Splide } from "@splidejs/splide"
+import "@splidejs/splide/dist/css/themes/splide-default.min.css"
 
 document.addEventListener("livewire:navigated", function () {
     if (!document.querySelectorAll("#image-carousel, #thumbnail-carousel").length) return

@@ -4,7 +4,10 @@
             <x-contact.section/>
         </div>
         <div class="w-full place-content-center">
-            <livewire:quote-form/>
+            <x-text-input/>
+            <label>
+                <input type="checkbox" class="accent-pink-500" checked> Customized
+            </label>
         </div>
     </div>
 </x-app-layout>

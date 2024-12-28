@@ -1,21 +1,24 @@
-.pswp__bg {
-    --pswp-bg: var(--color-gray-600);
-    --pswp-placeholder-bg: #222;
-    --pswp-root-z-index: 100000;
-    --pswp-preloader-color: rgba(79, 79, 79, 1);
-    --pswp-preloader-color-secondary: var(--color-amber-100);
-    --pswp-icon-color: var(--color-gray-900);
+@layer components {
+    .pswp__bg {
+        --pswp-bg: theme('colors.gray.600');
+        --pswp-placeholder-bg: #222;
+        --pswp-root-z-index: 100000;
+        --pswp-preloader-color: rgba(79, 79, 79, 1);
+        --pswp-preloader-color-secondary: theme('colors.amber.100');
+        --pswp-icon-color: theme('colors.gray.900');
 
 
-    --pswp-icon-color-secondary: var(--color-gray-900);
-    --pswp-icon-stroke-color: var(--color-gray-900);
-    --pswp-icon-stroke-width: 2px;
-    --pswp-error-text-color: var(--color-red-500);
+        --pswp-icon-color-secondary: theme('colors.gray.900');
+        --pswp-icon-stroke-color: theme('colors.gray.900');
+        --pswp-icon-stroke-width: 2px;
+        --pswp-error-text-color: theme('colors.sky.600');
 
 
-}
+    }
 
-.dark .pswp__bg {
-    --pswp-bg: var(--color-gray-950);
-    --pswp-icon-color: var(--color-gray-100)
+    .dark .pswp__bg {
+        --pswp-bg: theme('colors.gray.950');
+        --pswp-icon-color: theme('colors.gray.100')
+    }
+
 }

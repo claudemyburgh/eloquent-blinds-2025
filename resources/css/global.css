@@ -1,15 +1,17 @@
-@utility wrapper {
-    @apply w-full max-w-7xl px-4 md:px-6 lg:px-8 mx-auto;
+@layer components {
+    .wrapper {
+        @apply w-full max-w-7xl px-4 md:px-6 lg:px-8 mx-auto;
+    }
+
+    .mask {
+        mask-position: center center;
+        mask-size: 100% 100%;
+        mask-image: linear-gradient(black, transparent)
+    }
+
+    .w-square-diagonal {
+        width: 141.4213562373095%
+    }
+
+
 }
-
-@utility mask {
-    mask-position: center center;
-    mask-size: 100% 100%;
-    mask-image: linear-gradient(black, transparent)
-}
-
-@utility w-square-diagonal {
-    width: 141.4213562373095%
-}
-
-
