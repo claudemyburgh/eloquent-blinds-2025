@@ -6,7 +6,7 @@
     "isDynamicEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app-DzBB2Q4J.css",
+    "file": "assets/app-QB3NK9Qv.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -115,7 +115,7 @@
     "src": "resources/img/zebra-blinds.webp"
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-BXGIkOEv.js",
+    "file": "assets/app-80CNoSTF.js",
     "name": "app",
     "src": "resources/ts/app.ts",
     "isEntry": true,
@@ -123,7 +123,7 @@
       "node_modules/.pnpm/photoswipe@5.4.4/node_modules/photoswipe/dist/photoswipe.esm.js"
     ],
     "css": [
-      "assets/app-cPPnkASS.css"
+      "assets/app-B-TCEprH.css"
     ]
   }
 }
