@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpUndefinedMethodInspection */
 
     namespace App\Filament\Resources;
 
@@ -12,7 +12,6 @@
     use Filament\Forms;
     use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
     use Filament\Forms\Form;
-    use Filament\Forms\Set;
     use Filament\Resources\Resource;
     use Filament\Tables;
     use Filament\Tables\Table;
@@ -66,8 +65,7 @@
                         Forms\Components\TextInput::make('title')
                             ->unique(table: 'products', column: 'title', ignoreRecord: true)
                             ->required()
-                            ->live(onBlur: true)
-                            ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', str($state)->slug()))
+                            ->generateSlug()
                             ->maxLength(191),
 
                         Forms\Components\TextInput::make('slug')
@@ -81,6 +79,9 @@
                             ->cols(80)
                             ->autosize()
                             ->columnSpanFull(),
+
+                        Forms\Components\SpatieTagsInput::make('tags')
+                            ->type('products'),
 
                         Forms\Components\MarkdownEditor::make('content')
                             ->minHeight('250px')

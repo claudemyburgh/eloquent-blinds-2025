@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection ALL */
 
     namespace App\Filament\Resources;
 
@@ -7,7 +7,7 @@
     use App\Models\Category;
     use CodeWithDennis\FilamentSelectTree\SelectTree;
     use Filament\Forms;
-    use Filament\Forms\{Form, Set};
+    use Filament\Forms\{Form};
     use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
     use Filament\Resources\Resource;
     use Filament\Tables;
@@ -36,7 +36,7 @@
             return $form
                 ->schema(components: [
 
-                    Forms\Components\Section::make('Category Information')->schema([
+                    Forms\Components\Section::make('Category Information')->schema(components: [
                         SpatieMediaLibraryFileUpload::make('featured_image')
                             ->downloadable()
                             ->imageEditor()
@@ -46,8 +46,7 @@
                         Forms\Components\TextInput::make('title')
                             ->unique(table: 'categories', column: 'title', ignoreRecord: true)
                             ->required()
-                            ->live(onBlur: true)
-                            ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', str($state)->slug()))
+                            ->generateSlug()
                             ->maxLength(191),
 
                         Forms\Components\TextInput::make('slug')

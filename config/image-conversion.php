@@ -2,12 +2,7 @@
 
     return [
         'default' => [
-            'tiny' => [
-                'format' => 'webp',
-                'width' => 30,
-                'height' => 30,
-                'blur' => 20,
-            ],
+
             'thumb' => [
                 'format' => 'webp',
                 'width' => 180,

@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^1.7.9
     version: 1.7.9
   concurrently:
-    specifier: ^9.1.0
-    version: 9.1.0
+    specifier: ^9.1.1
+    version: 9.1.1
   laravel-vite-plugin:
     specifier: ^1.1.1
     version: 1.1.1(vite@6.0.6)
@@ -76,6 +76,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.4.17
     version: 3.4.17
+  tailwindcss-attributes:
+    specifier: ^1.2.3
+    version: 1.2.3
   vite:
     specifier: ^6.0.6
     version: 6.0.6
@@ -934,8 +937,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /concurrently@9.1.0:
-    resolution: {integrity: sha512-VxkzwMAn4LP7WyMnJNbHN5mKV9L2IbyDjpzemKr99sXNR3GqRNMMHdm7prV1ws9wg7ETj6WUkNOigZVsptwbgg==}
+  /concurrently@9.1.1:
+    resolution: {integrity: sha512-6VX8lrBIycgZKTwBsWS+bLrmkGRkDmvtGsYylRN9b93CygN6CbK46HmnQ3rdSOR8HRjdahDrxb5MqD9cEFOg5Q==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
@@ -1788,6 +1791,10 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: true
+
+  /tailwindcss-attributes@1.2.3:
+    resolution: {integrity: sha512-uCOnQ06aolH7+TMP4GxCboMxKCAZTdO7Wam1TwNLx2OSDajaM4Kamhq8ZDvMUZmPgCldFOfwZxRLOF2YsbUNQA==}
     dev: true
 
   /tailwindcss@3.4.17:

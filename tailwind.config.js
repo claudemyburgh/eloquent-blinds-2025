@@ -1,9 +1,9 @@
-import preset from "./vendor/filament/support/tailwind.config.preset"
 import colors from "tailwindcss/colors"
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    presets: [preset],
+    // presets: [preset],
+    darkMode: "class",
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.{js,ts}",
@@ -51,9 +51,13 @@ export default {
             },
         },
     },
+    corePlugins: {
+        aria: false,
+    },
     plugins: [
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
+        require("tailwindcss-attributes"),
         require("@tailwindcss/container-queries"),
         require("@designbycode/tailwindcss-mask-image"),
         require("@designbycode/tailwindcss-text-shadow"),

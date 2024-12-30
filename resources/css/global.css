@@ -3,6 +3,10 @@
         @apply w-full max-w-7xl px-4 md:px-6 lg:px-8 mx-auto;
     }
 
+    .form {
+        @apply border-gray-400 bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 focus:border-primary-500 dark:focus:border-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 rounded-default shadow-sm;
+    }
+
     .mask {
         mask-position: center center;
         mask-size: 100% 100%;

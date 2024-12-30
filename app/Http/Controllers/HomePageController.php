@@ -7,6 +7,7 @@
     use Illuminate\Support\Facades\Cache;
     use Illuminate\View\View;
 
+
     class HomePageController extends Controller
     {
         /**
