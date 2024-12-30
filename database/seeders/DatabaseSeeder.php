@@ -3,11 +3,11 @@
     namespace Database\Seeders;
 
     use App\Models\User;
-    use Google\Service\CloudBuild\Hash;
     use Illuminate\Database\Seeder;
+    use Illuminate\Support\Facades\Hash;
     use function config;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+    // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
     class DatabaseSeeder extends Seeder
     {
