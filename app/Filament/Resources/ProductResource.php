@@ -10,7 +10,6 @@
     use App\Models\Product;
     use CodeWithDennis\FilamentSelectTree\SelectTree;
     use Filament\Forms;
-    use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
     use Filament\Forms\Form;
     use Filament\Resources\Resource;
     use Filament\Tables;
@@ -41,7 +40,7 @@
 
                     Forms\Components\Section::make('Product Information')->schema([
 
-                        SpatieMediaLibraryFileUpload::make('featured_image')
+                        Forms\Components\SpatieMediaLibraryFileUpload::make('featured_image')
                             ->multiple()
                             ->downloadable()
                             ->panelLayout('grid')
@@ -131,6 +130,17 @@
         {
             return $table
                 ->columns([
+
+                    Tables\Columns\SpatieMediaLibraryImageColumn::make('featured_image')
+                        ->label("Images")
+                        ->size(42)
+                        ->stacked()
+                        ->limit(3)
+                        ->collection('products')
+                        ->ring(4)
+                        ->limitedRemainingText(isSeparate: true)
+                        ->circular(),
+
                     Tables\Columns\TextColumn::make('category.title')
                         ->sortable()
                         ->numeric()

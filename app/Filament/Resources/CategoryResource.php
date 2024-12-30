@@ -97,6 +97,17 @@
                     ExportAction::make()->exporter(CategoryExporter::class),
                 ])
                 ->columns([
+
+                    Tables\Columns\SpatieMediaLibraryImageColumn::make('featured_image')
+                        ->label('Image')
+                        ->size(42)
+                        ->stacked()
+                        ->limit(3)
+                        ->collection('categories')
+                        ->ring(4)
+                        ->limitedRemainingText(isSeparate: true)
+                        ->circular(),
+
                     Tables\Columns\TextColumn::make('id')
                         ->searchable(),
                     Tables\Columns\TextColumn::make('title')
