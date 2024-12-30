@@ -1,8 +1,9 @@
 import colors from "tailwindcss/colors"
+import preset from "./vendor/filament/support/tailwind.config.preset"
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    // presets: [preset],
+    presets: [preset],
     darkMode: "class",
     content: [
         "./resources/**/*.blade.php",

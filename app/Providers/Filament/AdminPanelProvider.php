@@ -28,6 +28,7 @@
                 ->id('admin')
                 ->path('admin')
                 ->spa()
+                ->viteTheme('resources/css/filament/admin/theme.css')
                 ->login()
                 ->colors([
                     'primary' => Color::Sky,

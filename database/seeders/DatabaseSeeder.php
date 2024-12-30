@@ -4,6 +4,7 @@
 
     use App\Models\User;
     use Illuminate\Database\Seeder;
+    use function config;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -19,12 +20,15 @@
             User::factory()->create([
                 'name' => 'Claude Myburgh',
                 'email' => 'claude@eloquentblinds.co.za',
+                'password' => config('contact-details.users.claude.password')
             ]);
+
 
             $this->call([
                 CategorySeeder::class,
                 ProductSeeder::class,
-                RepresentativeSeeder::class
+                RepresentativeSeeder::class,
+                FaqSeeder::class
             ]);
         }
     }

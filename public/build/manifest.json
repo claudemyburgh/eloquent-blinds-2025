@@ -6,8 +6,13 @@
     "isDynamicEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app-UkXUxsKs.css",
+    "file": "assets/app-2vSs3HlT.css",
     "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/filament/admin/theme.css": {
+    "file": "assets/theme-CSnAPWcD.css",
+    "src": "resources/css/filament/admin/theme.css",
     "isEntry": true
   },
   "resources/img/alu-blinds.webp": {
