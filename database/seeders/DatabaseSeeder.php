@@ -3,6 +3,7 @@
     namespace Database\Seeders;
 
     use App\Models\User;
+    use Google\Service\CloudBuild\Hash;
     use Illuminate\Database\Seeder;
     use function config;
 
@@ -20,7 +21,7 @@
             User::factory()->create([
                 'name' => 'Claude Myburgh',
                 'email' => 'claude@eloquentblinds.co.za',
-                'password' => config('contact-details.users.claude.password')
+                'password' => Hash::make(config('contact-details.users.claude.password'))
             ]);
 
 
