@@ -7,7 +7,7 @@
     use Illuminate\Console\Command;
     use Illuminate\Database\Eloquent\Collection;
     use Illuminate\Database\Eloquent\Model;
-    use Illuminate\Support\Facades\File;
+    use Illuminate\Support\Facades\Storage;
     use Illuminate\Support\Str;
 
 
@@ -19,7 +19,15 @@
          *
          * @var string
          */
-        protected $signature = 'generate:model-data {model} {--exclude=} {--only=}';
+        protected $signature = 'generate:model-data
+            {model}
+            {--exclude=* : Comma-separated list of fields to exclude}  // * allows multiple
+            {--e=* : Alias for --exclude}
+            {--only=* : Comma-separated list of fields to include} // * allows multiple
+            {--o=* : Alias for --only}
+            {--exclude-dates : Exclude date fields}
+            {--ed : Alias for --exclude-dates}';
+
 
         /**
          * The console command description.
@@ -41,6 +49,11 @@
             $modelName = $this->argument('model');
             $excludeFields = $this->option('exclude') ? explode(',', $this->option('exclude')) : [];
             $onlyFields = $this->option('only') ? explode(',', $this->option('only')) : [];
+            $excludeDates = $this->option('exclude-dates');
+
+            $exclude = implode(',', $this->option('exclude') ?: $this->option('e') ?: []); // if both -e and --exclude are empty default to [] which implodes to ''
+            $only = implode(',', $this->option('only') ?: $this->option('o') ?: []);
+            $excludeDates = $this->option('exclude-dates') ?: $this->option('ed');
 
             try {
                 // 1. Get the Model Class - Attempts to get the model class from the provided model name.  Throws error if not found.
@@ -52,12 +65,14 @@
                 $model = new $modelClass();
 
                 // 2. Generate Filename - Creates a unique filename based on the current date and model name. The file will be stored in the database directory.
-                $date = Carbon::now()->format('Y_m_d_His');
-                $filename = $date . '_' . Str::lower(Str::pluralStudly($modelName)) . '.php';
-                $filepath = database_path($filename); // Store in the database directory
+                $date = Carbon::now()->format('Y-m-d');
+                $filename = Carbon::now()->format('Y_m_d_His') . '_' . Str::lower(Str::pluralStudly($modelName)) . '.php';
+                $filepath = $date . '/' . $filename;  //Updated file path
 
-                // 3. Fetch and format data - Fetches all records from the model, transforms them into arrays, and applies field filtering based on --exclude and --only options.
-                $data = $model::all()->map(function ($item) use ($excludeFields, $onlyFields) {
+                // 3. Fetch and format data - Fetches all records from the model, transforms them into arrays,
+                // and applies field filtering based on --exclude and --only options.
+
+                $data = $model::all()->map(function ($item) use ($excludeFields, $onlyFields, $excludeDates) {
                     $transformed = $this->transformToArray($item);
 
                     if (!empty($excludeFields)) {
@@ -65,18 +80,26 @@
                         $transformed = array_diff_key($transformed, array_flip($excludeFields));
                     }
 
+                    if ($excludeDates) {
+                        unset($transformed['created_at']);
+                        unset($transformed['updated_at']);
+                        unset($transformed['deleted_at']);
+                    }
+
                     if (!empty($onlyFields)) {
                         // Include only specified fields in the array
                         $transformed = array_intersect_key($transformed, array_flip($onlyFields));
                     }
+
                     return $transformed;
                 })->toArray();
 
-                //Remove Numberic Keys -  Removes numeric keys from the array, making it a purely associative array.
+                //Remove Numeric Keys -  Removes numeric keys from the array, making it a purely associative array.
                 $data = array_values($data);
 
-
-                // 4. Generate PHP code with short array syntax - Generates the content of the PHP file, which will return the data as a PHP array.  Uses short array syntax [] instead of array().
+                // 4. Generate PHP code with short array syntax
+                // Generates the content of the PHP file, which will return the data as a PHP array.
+                //  Uses short array syntax [] instead of array().
                 $content = "<?php\n\nreturn [\n" .
                     implode(",\n", array_map(function ($item) {
                         return '    ' . $this->formatArray($item, 1);
@@ -84,9 +107,11 @@
                     "\n];\n";
 
                 // 5. Write to file - Writes the generated PHP code to the file.
-                File::put($filepath, $content);
+                Storage::disk('model_data')->makeDirectory($date); // Create model_data/{date} directory
+                Storage::disk('model_data')->put($filepath, $content);  // put() method handles file creation
 
-                $this->info("File '$filename' generated successfully in the database directory.");
+
+                $this->info("File '$filename' generated successfully in the storage/model_data/{$date} directory.");
 
             } catch (Exception $e) {
                 $this->error('An error occurred: ' . $e->getMessage());

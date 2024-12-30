@@ -2,6 +2,7 @@
 
 return [
     [
+        "id" => 1,
         "category_id" => 1,
         "title" => "Hurricane Aluminium Shutters",
         "slug" => "hurricane-aluminium-shutters",
@@ -19,6 +20,7 @@ Functional, durable, rustproof, and easy to clean, they come with warranties of 
         "popular" => 0,
     ],
     [
+        "id" => 2,
         "category_id" => 1,
         "title" => "ShutterGuard® Aluminium Security Shutters",
         "slug" => "shutterguard-aluminium-security-shutters",
@@ -34,6 +36,7 @@ Control light, noise, and temperature with ease, while our patented gear lock en
         "popular" => 1,
     ],
     [
+        "id" => 3,
         "category_id" => 1,
         "title" => "ShutterStyle Aluminium Barrier Security Shutters",
         "slug" => "shutterstyle-aluminium-barrier-security-shutters",
@@ -52,6 +55,7 @@ Featuring a 60mm bolt and sleek slide action with a push-lock system, they blend
         "popular" => 1,
     ],
     [
+        "id" => 4,
         "category_id" => 1,
         "title" => "Thermowood® Shutters",
         "slug" => "thermowood-shutters",
@@ -69,6 +73,7 @@ Tested under various conditions, they come with a 3-year warranty for peace of m
         "popular" => 0,
     ],
     [
+        "id" => 5,
         "category_id" => 1,
         "title" => "Timber Wood Shutters",
         "slug" => "timber-wood-shutters",
@@ -88,6 +93,7 @@ Choose from standard or custom configurations to suit any design need, from circ
         "popular" => 0,
     ],
     [
+        "id" => 6,
         "category_id" => 5,
         "title" => "Aluminium Venetian Blinds",
         "slug" => "aluminium-venetian-blinds",
@@ -105,6 +111,7 @@ Available in 25mm and 50mm widths, these durable blinds feature stainless steel 
         "popular" => 1,
     ],
     [
+        "id" => 7,
         "category_id" => 5,
         "title" => "Bamboo Venetian Blinds",
         "slug" => "bamboo-venetian-blinds",
@@ -122,6 +129,7 @@ Their eco-friendly nature adds to the natural ambiance of your space, while thei
         "popular" => 0,
     ],
     [
+        "id" => 8,
         "category_id" => 5,
         "title" => "Styro-Wood Venetian Blinds",
         "slug" => "styro-wood-venetian-blinds",
@@ -139,6 +147,7 @@ Their eco-friendly nature adds to the natural ambiance of your space, while thei
         "popular" => 0,
     ],
     [
+        "id" => 9,
         "category_id" => 5,
         "title" => "Wooden Venetian Blinds",
         "slug" => "wooden-venetian-blinds",
@@ -158,6 +167,7 @@ Crafted from renewable wood sourced from sustainable plantations in the Far East
         "popular" => 0,
     ],
     [
+        "id" => 10,
         "category_id" => 6,
         "title" => "B-Range Block-Out Roller Blinds",
         "slug" => "b-range-block-out-roller-blinds",
@@ -173,6 +183,7 @@ Delve into the refined elegance of our plain Block Out fabric, which epitomizes 
         "popular" => 1,
     ],
     [
+        "id" => 11,
         "category_id" => 6,
         "title" => "Berlin Block-Out Roller Blinds",
         "slug" => "berlin-block-out-roller-blinds",
@@ -191,6 +202,7 @@ Whether you're looking for a solution for your bedroom or office, the Berlin col
         "popular" => 0,
     ],
     [
+        "id" => 12,
         "category_id" => 6,
         "title" => "C-Screen-Style Roller Blinds",
         "slug" => "c-screen-style-roller-blinds",
@@ -206,6 +218,7 @@ Boasting a slim and understated profile, it features a 5% openness factor and is
         "popular" => 0,
     ],
     [
+        "id" => 13,
         "category_id" => 6,
         "title" => "Essential 3000 10% Light-Filtering Roller Blinds",
         "slug" => "essential-3000-10-light-filtering-roller-blinds",
@@ -226,6 +239,7 @@ Its combination of texture and transparency makes it a standout choice for any i
         "popular" => 0,
     ],
     [
+        "id" => 14,
         "category_id" => 6,
         "title" => "Essential 4000 5% Light-Filtering Roller Blinds",
         "slug" => "essential-4000-5-light-filtering-roller-blinds",
@@ -245,6 +259,7 @@ This makes the Essential 4000 5% rollup blinds an ideal option for those who req
         "popular" => 0,
     ],
     [
+        "id" => 15,
         "category_id" => 6,
         "title" => "Le Reve Block-Out Roller Blinds",
         "slug" => "le-reve-block-out-roller-blinds",
@@ -264,6 +279,7 @@ Beyond its visual charm, Le Reve fabric boasts a foam-coated acrylic backing on 
         "popular" => 0,
     ],
     [
+        "id" => 16,
         "category_id" => 6,
         "title" => "Mombassa Block-Out Roller Blinds",
         "slug" => "mombassa-block-out-roller-blinds",
@@ -280,6 +296,7 @@ The soft color palette of these rollup blinds adds a touch of elegance to any in
         "popular" => 0,
     ],
     [
+        "id" => 17,
         "category_id" => 6,
         "title" => "Mombassa Light-Filtering Roller Blinds",
         "slug" => "mombassa-light-filtering-roller-blinds",
@@ -301,6 +318,7 @@ Get Quote",
         "popular" => 0,
     ],
     [
+        "id" => 18,
         "category_id" => 6,
         "title" => "München Block-Out Roller Blinds",
         "slug" => "munchen-block-out-roller-blinds",
@@ -318,6 +336,7 @@ Experience the unparalleled versatility of our translucent fabric, which combine
         "popular" => 0,
     ],
     [
+        "id" => 19,
         "category_id" => 6,
         "title" => "Nairobi Sheer-Weave Roller Blinds",
         "slug" => "nairobi-sheer-weave-roller-blinds",
@@ -339,6 +358,7 @@ These rollup blinds provide an effortless way to control light and privacy in yo
         "popular" => 0,
     ],
     [
+        "id" => 20,
         "category_id" => 6,
         "title" => "PVC Block-Out Roller Blinds",
         "slug" => "pvc-block-out-roller-blinds",
@@ -359,6 +379,7 @@ Perfect for rooms requiring total sun Block Out, such as boardrooms and bedrooms
         "popular" => 0,
     ],
     [
+        "id" => 21,
         "category_id" => 6,
         "title" => "Proto Light-Filtering Roller Blinds",
         "slug" => "proto-light-filtering-roller-blinds",
@@ -376,6 +397,7 @@ These rollup blinds are the perfect solution for those looking for a functional 
         "popular" => 0,
     ],
     [
+        "id" => 22,
         "category_id" => 6,
         "title" => "Satin Flower Block-Out Roller Blinds",
         "slug" => "satin-flower-block-out-roller-blinds",
@@ -394,6 +416,7 @@ To create a pure and gentle atmosphere, designers often choose soft pastel color
         "popular" => 0,
     ],
     [
+        "id" => 23,
         "category_id" => 6,
         "title" => "Sheerweave Light-Filtering Roller Blind",
         "slug" => "sheerweave-light-filtering-roller-blind",
@@ -409,6 +432,7 @@ This sustainable alternative not only preserves the appearance and performance o
         "popular" => 0,
     ],
     [
+        "id" => 24,
         "category_id" => 6,
         "title" => "Soltis Horizon 86 Screen Roller Blinds",
         "slug" => "soltis-horizon-86-screen-roller-blinds",
@@ -429,6 +453,7 @@ The Taylor’s Soltis Ferrari Horizon 86 blend allows natural light to permeate 
         "popular" => 0,
     ],
     [
+        "id" => 25,
         "category_id" => 6,
         "title" => "Soltis Master 99 Dim Out Roller Blinds",
         "slug" => "soltis-master-99-dim-out-roller-blinds",
@@ -448,6 +473,7 @@ Taylor’s Soltis Ferrari Master 99 Blinds epitomize luxury, providing not only 
         "popular" => 0,
     ],
     [
+        "id" => 26,
         "category_id" => 6,
         "title" => "Soltis Touch Screen Roller Blinds",
         "slug" => "soltis-touch-screen-roller-blinds",
@@ -468,6 +494,7 @@ This exclusive blend masterfully manipulates light, producing mesmerizing chroma
         "popular" => 0,
     ],
     [
+        "id" => 27,
         "category_id" => 6,
         "title" => "V-Range Block-Out Roller Blinds",
         "slug" => "v-range-block-out-roller-blinds",
@@ -488,6 +515,7 @@ Crafted from PVC-free material and coated with acrylic, this fabric not only ens
         "popular" => 0,
     ],
     [
+        "id" => 28,
         "category_id" => 6,
         "title" => "Waving Leave Roller Blinds",
         "slug" => "waving-leave-roller-blinds",
@@ -508,6 +536,7 @@ These rollup blinds provide an effortless way to control light and privacy in yo
         "popular" => 1,
     ],
     [
+        "id" => 29,
         "category_id" => 6,
         "title" => "Yamar Block-Out Roller Blinds",
         "slug" => "yamar-block-out-roller-blinds",
@@ -528,6 +557,7 @@ Get Quote",
         "popular" => 0,
     ],
     [
+        "id" => 30,
         "category_id" => 8,
         "title" => "Skyros Blinds",
         "slug" => "skyros-blinds",
@@ -543,6 +573,7 @@ The Skyros zebra blind, in particular, is a standout product in this category, o
         "popular" => 0,
     ],
     [
+        "id" => 31,
         "category_id" => 8,
         "title" => "Zakynthos Blinds",
         "slug" => "zakynthos-blinds",
@@ -558,6 +589,7 @@ These zebra blinds are a unique and sophisticated way to add a touch of elegance
         "popular" => 0,
     ],
     [
+        "id" => 32,
         "category_id" => 9,
         "title" => "Palma Block-Out Blinds",
         "slug" => "palma-block-out-blinds",
@@ -573,6 +605,7 @@ Whether you're looking to create a calming and restful bedroom or a focused and 
         "popular" => 0,
     ],
     [
+        "id" => 33,
         "category_id" => 9,
         "title" => "Palma Light Filtering Blinds",
         "slug" => "palma-light-filtering-blinds",

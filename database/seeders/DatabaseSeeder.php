@@ -24,6 +24,7 @@
             $this->call([
                 CategorySeeder::class,
                 ProductSeeder::class,
+                RepresentativeSeeder::class
             ]);
         }
     }

@@ -5,7 +5,6 @@
 
     use App\Models\Product;
     use Illuminate\Support\Facades\Cache;
-    use Illuminate\View\View;
 
 
     class HomePageController extends Controller
@@ -13,7 +12,7 @@
         /**
          * Handle the incoming request.
          */
-        public function __invoke(): View
+        public function __invoke()
         {
             return view('pages.home', [
                 'products' => Cache::remember('home-products', config('cache.time_to_life'), function () {

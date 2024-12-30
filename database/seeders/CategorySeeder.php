@@ -14,7 +14,7 @@
         {
 
 
-            $categories = require_once __DIR__ . '/../2024_12_26_230754_categories.php';
+            $categories = require_once __DIR__ . '/../2024-12-30/2024_12_30_193440_categories.php';
 
             foreach ($categories as $category) {
                 Category::create($category);

@@ -26,6 +26,9 @@
             'bio',
         ];
 
+        protected $appends = ['full_name'];
+
+
         /**
          * @param \Illuminate\Database\Eloquent\Builder $builder
          *
@@ -37,12 +40,21 @@
         }
 
         /**
+         * @return string
+         */
+        public function getFullNameAttribute(): string
+        {
+            return trim($this->first_name) . " " . trim($this->last_name);
+        }
+
+        /**
          * @return string[]
          */
         protected function casts(): array
         {
             return [
-                'active' => 'boolean'
+                'active' => 'boolean',
+                'full_name' => 'string'
             ];
         }
 

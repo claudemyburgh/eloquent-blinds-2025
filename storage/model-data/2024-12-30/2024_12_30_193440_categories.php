@@ -13,9 +13,6 @@ With our Security Shutters, say goodbye to traditional burglar bars and security
         "_lft" => 1,
         "_rgt" => 2,
         "parent_id" => null,
-        "deleted_at" => null,
-        "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 11:43:33",
     ],
     [
         "id" => 2,
@@ -32,9 +29,6 @@ Choose from chic styles like Roller, Venetian, Vertical Blinds to perfectly comp
         "_lft" => 3,
         "_rgt" => 14,
         "parent_id" => null,
-        "deleted_at" => null,
-        "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 15:02:58",
     ],
     [
         "id" => 3,
@@ -47,9 +41,6 @@ Choose from chic styles like Roller, Venetian, Vertical Blinds to perfectly comp
         "_lft" => 15,
         "_rgt" => 16,
         "parent_id" => null,
-        "deleted_at" => null,
-        "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 11:43:33",
     ],
     [
         "id" => 4,
@@ -64,9 +55,6 @@ Discover our standout Eve MotionBlinds series, featuring battery-powered motors 
         "_lft" => 17,
         "_rgt" => 18,
         "parent_id" => null,
-        "deleted_at" => null,
-        "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 11:43:33",
     ],
     [
         "id" => 5,
@@ -80,9 +68,6 @@ As window covering specialists, we draw on years of experience to create innovat
         "_lft" => 4,
         "_rgt" => 5,
         "parent_id" => 2,
-        "deleted_at" => null,
-        "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 11:44:34",
     ],
     [
         "id" => 6,
@@ -97,9 +82,6 @@ Our comprehensive product range caters to every roller blind need, from basic to
         "_lft" => 6,
         "_rgt" => 7,
         "parent_id" => 2,
-        "deleted_at" => null,
-        "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 21:16:25",
     ],
     [
         "id" => 7,
@@ -116,9 +98,6 @@ As window covering specialists, we draw on years of experience to create innovat
         "_lft" => 8,
         "_rgt" => 9,
         "parent_id" => 2,
-        "deleted_at" => null,
-        "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 21:10:19",
     ],
     [
         "id" => 8,
@@ -131,9 +110,6 @@ As window covering specialists, we draw on years of experience to create innovat
         "_lft" => 10,
         "_rgt" => 11,
         "parent_id" => 2,
-        "deleted_at" => null,
-        "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 11:44:40",
     ],
     [
         "id" => 9,
@@ -148,8 +124,5 @@ As window covering specialists, we draw on years of experience to create innovat
         "_lft" => 12,
         "_rgt" => 13,
         "parent_id" => 2,
-        "deleted_at" => null,
-        "created_at" => "2024-12-26 11:43:33",
-        "updated_at" => "2024-12-26 21:44:05",
     ]
 ];

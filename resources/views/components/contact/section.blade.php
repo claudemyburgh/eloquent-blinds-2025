@@ -19,8 +19,8 @@
     </header>
     @foreach($representatives as $user)
         <x-contact.card
-            name="{{$user->first_name}}"
-            surname="{{ $user->lastname }}"
+            name="{{$user->full_name}}"
+
             phone="{{ $user->phone }}"
             email="{{ $user->email }}"
             image="{{ $user->getFirstMediaUrl() }}"/>

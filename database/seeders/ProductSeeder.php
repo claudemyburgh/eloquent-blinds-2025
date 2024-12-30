@@ -14,7 +14,7 @@
         {
 
 
-            $products = require __DIR__ . '/../2024_12_26_230800_products.php';
+            $products = require __DIR__ . '/../2024-12-30/2024_12_30_193505_products.php';
 
 //            usort($products, function ($a, $b) {
 //                return strcmp($a['title'], $b['title']);
