@@ -6,7 +6,7 @@
 <img src="https://laravel.com/img/notification-logo.png" class="logo" alt="Laravel Logo">
 @else
 
-<svg width="380" style="max-width: 90%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3413.19 491.55">
+<svg width="380" height="180" style="max-width: 90%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3413.19 491.55">
     <defs>
         <style>
             .cls-1 {
