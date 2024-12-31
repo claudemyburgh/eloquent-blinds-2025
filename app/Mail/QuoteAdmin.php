@@ -40,6 +40,7 @@
                     'name' => $this->contactDetails['data']['name'],
                     'subject' => $this->contactDetails['data']['subject'],
                     'email' => $this->contactDetails['data']['email'],
+                    'phone' => $this->contactDetails['data']['phone'],
                 ]
             );
         }

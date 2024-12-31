@@ -1,10 +1,14 @@
+
 <x-mail::message>
-# Introduction
+# Hi, {{ $name }}
 
-The body of your message.
+Here appreciate that you contacted us.
+Whe will get back to you asap.
 
-<x-mail::button :url="''">
-Button Text
+
+Meanwhile please take the time to like us on Facebook.
+<x-mail::button url="https://www.facebook.com/eloquentblinds">
+Facebook
 </x-mail::button>
 
 Thanks,<br>
