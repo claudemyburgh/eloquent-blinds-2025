@@ -39,7 +39,7 @@
 @endif
 <x-footer/>
 <!-- Scripts -->
-@livewireScripts
+@livewireScriptConfig
 @filamentScripts
 </body>
 </html>

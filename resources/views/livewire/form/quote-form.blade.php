@@ -1,6 +1,6 @@
 <div class="p-6 rounded-default border bg-gray-50/75 dark:bg-gray-900/75 border-gray-300 dark:border-gray-800">
 
-    
+
     <form class="space-y-4" wire:submit="send" method="post">
         @csrf
         @method('POST')
@@ -43,7 +43,7 @@
 
         <div>
             <x-ui.input-label for="message" :required/>
-            <x-ui.input-textarea wire:model="message" id="message" name="message" rows="8"/>
+            <x-ui.input-textarea x-data x-autosize wire:model="message" id="message" name="message" rows="8"/>
             <x-ui.input-error error="message"/>
         </div>
         <div>
