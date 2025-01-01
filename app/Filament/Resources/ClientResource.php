@@ -21,6 +21,12 @@
 
         protected static ?string $navigationGroup = "Rep's and Clients";
 
+
+        public static function getGloballySearchableAttributes(): array
+        {
+            return ['first_name', 'last_name', 'email', 'phone'];
+        }
+
         public static function form(Form $form): Form
         {
             return $form

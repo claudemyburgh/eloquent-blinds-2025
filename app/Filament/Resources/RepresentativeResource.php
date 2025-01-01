@@ -19,8 +19,14 @@
 
         protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-        protected static ?string $recordTitleAttribute = 'name';
+
         protected static ?string $navigationGroup = "Rep's and Clients";
+
+        public static function getGloballySearchableAttributes(): array
+        {
+            return ['first_name', 'last_name', 'phone', 'email'];
+        }
+
 
         public static function form(Form $form): Form
         {

@@ -21,6 +21,11 @@
 
         protected static ?string $navigationGroup = 'Extra Information';
 
+        public static function getGloballySearchableAttributes(): array
+        {
+            return ['question', 'answer',];
+        }
+
 
         public static function form(Form $form): Form
         {
