@@ -26,7 +26,7 @@
             Mail::to(
                 new Address(
                     $event->data['email'],
-                    $event->data['name']
+                    $event->data['first_name']
                 ))
                 ->queue(new QuoteCustomer((array)$event));
         }

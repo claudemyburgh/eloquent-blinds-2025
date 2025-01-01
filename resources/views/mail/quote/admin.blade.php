@@ -4,7 +4,7 @@
 {{ $message }}
 
 ### Contact details
-- {{ $name }}
+- {{ $first_name }} {{ $last_name }}
 - {{ $email }}
 - {{ $phone }}
 

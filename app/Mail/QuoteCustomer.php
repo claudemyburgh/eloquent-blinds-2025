@@ -37,7 +37,8 @@
                 markdown: 'mail.quote.customer',
                 with: [
                     'message' => $this->contactDetails['data']['message'],
-                    'name' => $this->contactDetails['data']['name'],
+                    'first_name' => $this->contactDetails['data']['first_name'],
+                    'last_name' => $this->contactDetails['data']['last_name'],
                     'subject' => $this->contactDetails['data']['subject'],
                     'email' => $this->contactDetails['data']['email'],
                     'phone' => $this->contactDetails['data']['phone'],
