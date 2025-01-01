@@ -24,7 +24,7 @@
         protected static ?string $navigationGroup = 'Blinds & Shutters';
 
 
-//        protected static ?string $recordTitleAttribute = 'title';
+        protected static ?string $recordTitleAttribute = 'title';
 
         public static function getGloballySearchableAttributes(): array
         {

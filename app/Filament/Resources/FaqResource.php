@@ -22,7 +22,7 @@
         protected static ?string $navigationGroup = 'Extra Information';
 
         protected static ?string $recordTitleAttribute = 'question';
-        
+
         public static function getGloballySearchableAttributes(): array
         {
             return ['question', 'answer',];

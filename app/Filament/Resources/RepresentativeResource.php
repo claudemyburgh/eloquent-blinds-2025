@@ -22,6 +22,8 @@
 
         protected static ?string $navigationGroup = "Rep's and Clients";
 
+        protected static ?string $recordTitleAttribute = 'first_name';
+
         public static function getGloballySearchableAttributes(): array
         {
             return ['first_name', 'last_name', 'phone', 'email'];
