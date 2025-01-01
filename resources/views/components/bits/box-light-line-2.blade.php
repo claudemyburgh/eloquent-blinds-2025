@@ -7,10 +7,10 @@
     $classes .= $top ? 'top-0' : 'bottom-0'
 @endphp
 
-<div aria-hidden="true"
+<div
     @class([$classes])>
-    <div
-        class="w-1/2 h-[20px] rounded-b-full absolute top-0 translate-x-1/2 blur-md bg-secondary-500/10 "></div>
+    <div aria-hidden="true"
+         class="w-1/2 h-[20px] rounded-b-full absolute top-0 translate-x-1/2 blur-md bg-secondary-500/10 "></div>
 </div>
 
 

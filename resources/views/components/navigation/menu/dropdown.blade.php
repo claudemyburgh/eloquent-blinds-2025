@@ -28,13 +28,13 @@
             @if($link->slug === "blinds")
                 @foreach($categories->where('slug', '!==', 'shutters') as $category)
                     <div class="col-span-1">
-                        <a wire:navigate class="font-black text-gray-900 dark:text-gray-100 hover:text-primary-500 text-lg hover:dark:text-primary-500"
+                        <a role="menuitem" wire:navigate class="font-black text-gray-900 dark:text-gray-100 hover:text-primary-500 text-lg hover:dark:text-primary-500"
                            href="{{ route('categories.show', $category) }}" role="menuitem">
                             {{ $category->title }}
                         </a>
                         <div class="mt-2 space-y-3 pl-4 border-l border-gray-300 dark:border-gray-800">
                             @foreach($category->children as $child)
-                                <a wire:navigate tabindex="0" href="{{ route('categories.show', $child)  }}"
+                                <a role="menuitem" wire:navigate tabindex="0" href="{{ route('categories.show', $child)  }}"
                                    class="flex items-center justify-between group relative text-gray-700 dark:text-gray-300  hover:text-primary-500 hover:dark:text-primary-500 focus:text-primary-500 focus:dark:text-primary-500">{{ $child->title }}
                                     <span class="absolute top-1.5 bg-gray-200 dark:bg-gray-900 -left-[22px] border-2 group-hover:border-amber-500 border-gray-300 dark:border-gray-800 w-3  h-3 rounded-full group-focus:ring-0 block"></span>
                                 </a>
@@ -43,7 +43,7 @@
                     </div>
                 @endforeach
             @elseif($link->slug === "shutters")
-                <a wire:navigate href="{{ route('categories.show', 'shutters') }}"
+                <a role="menuitem" wire:navigate href="{{ route('categories.show', 'shutters') }}"
                    class="border border-gray-300 dark:border-gray-800 rounded-default overflow-hidden relative isolate group shadow-lg shadow-primary-500/20">
                     <x-svg.shutter-ring class="absolute inset-3 z-10 drop-shadow-hard"/>
                     <img
@@ -54,13 +54,13 @@
                 </a>
                 @foreach($categories->where('slug', '===', 'shutters') as $category)
                     <div class="col-span-2">
-                        <a wire:navigate class="font-black text-gray-900 dark:text-gray-100 hover:text-primary-500 text-lg hover:dark:text-primary-500"
+                        <a role="menuitem" wire:navigate class="font-black text-gray-900 dark:text-gray-100 hover:text-primary-500 text-lg hover:dark:text-primary-500"
                            href="{{ route('categories.show', $category) }}" role="menuitem">
                             {{$category->title}}
                         </a>
                         <div class="mt-2 space-y-3 pl-4 border-l border-gray-300 dark:border-gray-800 col-span-2">
                             @foreach($category->products as $product)
-                                <a wire:navigate tabindex="0" href="{{ route('products.show', [$category,  $product]) }}"
+                                <a role="menuitem" wire:navigate tabindex="0" href="{{ route('products.show', [$category,  $product]) }}"
                                    class="flex items-center justify-between group relative text-gray-700 dark:text-gray-300 hover:text-primary-500 hover:dark:text-primary-500 focus:text-primary-500 focus:dark:text-primary-500">
                                     {{ $product->title }}
                                     <span
