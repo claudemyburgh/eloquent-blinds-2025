@@ -7,6 +7,7 @@
         case TAYLOR = 'taylor-blinds';
         case ALUVERT = 'aluvert-cape';
         case QUANTUM = 'quantum-products';
+        case SHUTTERWAY = 'shutterway';
 
 
         /**
@@ -14,7 +15,7 @@
          */
         public static function options(): array
         {
-            return array_merge(...array_map(fn($case) => [$case->value => $case->label()], self::cases()));
+            return array_merge(...array_map(fn ($case) => [$case->value => $case->label()], self::cases()));
         }
 
         /**
@@ -26,6 +27,7 @@
                 self::TAYLOR => 'Taylor Blinds',
                 self::ALUVERT => 'Aluvert Cape',
                 self::QUANTUM => 'Quantum Products',
+                self::SHUTTERWAY => 'Shutterway',
             };
         }
 

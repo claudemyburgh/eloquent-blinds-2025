@@ -2,6 +2,7 @@
 
     namespace App\Providers\Filament;
 
+    use CharrafiMed\GlobalSearchModal\GlobalSearchModalPlugin;
     use Filament\Http\Middleware\Authenticate;
     use Filament\Http\Middleware\AuthenticateSession;
     use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -40,7 +41,9 @@
                     Pages\Dashboard::class,
                 ])
                 ->plugins([
-
+                    GlobalSearchModalPlugin::make()
+                        ->associateItemsWithTheirGroups()
+                        ->expandedUrlTarget(enabled: true)
 
                 ])
                 ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
