@@ -5,7 +5,7 @@
         <div aria-hidden="true" class="absolute w-1/2 top-0 h-[2px] left-0 bg-gradient-to-r from-transparent via-primary-200 to-transparent"></div>
         <a wire:navigate href="{{ $route }}" @class(['relative bg-white group dark:bg-gray-900 rounded-default flex flex-1 flex-col'])>
             <figure @class(['overflow-hidden rounded-t-default border-b-2 border-primary-500/10'])>
-                <img width="290" height="290" @class(['rounded-default group-hover:scale-105 transition duration-300 block w-full aspect-square rounded-b-none shadow-md shadow-primary-500/50'])
+                <img width="290" height="290" @class(['rounded-default group-hover:scale-105 transition duration-300 block w-full aspect-square rounded-b-none shadow-md shadow-primary-500/50 object-cover'])
                 src="{{ $category->getFirstMediaUrl('categories') }}" alt="{{ $category->title }}">
             </figure>
             <div class="p-4 text-xs sm:text-sm md:text-lg items-center text-gray-700 font-bold dark:text-white flex justify-between group-hover:underline">

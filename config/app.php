@@ -15,7 +15,7 @@
 
         'name' => env('APP_NAME', 'Laravel'),
 
-        'placeholder' => './no-image.png',
+        'placeholder' => './placeholder.jpeg',
 
         'placeholder_meta_image' => 'https://fakeimg.pl/600x600',
 

@@ -81,6 +81,16 @@
          */
         public function scopeQuantum(Builder $builder): void
         {
+            $builder->supplier(Supplier::SHUTTERWAY);
+        }
+
+        /**
+         * @param \Illuminate\Database\Eloquent\Builder $builder
+         *
+         * @return void
+         */
+        public function scopeShutterway(Builder $builder): void
+        {
             $builder->supplier(Supplier::QUANTUM);
         }
 
