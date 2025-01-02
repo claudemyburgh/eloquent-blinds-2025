@@ -1,7 +1,7 @@
 <div class="wrapper lg:my-12 grid grid-cols-1 lg:grid-cols-5 relative z-10">
     <div class="lg:col-span-3  z-10 space-y-4">
         <div class="mt-24 sm:mt-32 lg:mt-16">
-            <a href="https://view.publitas.com/e-books/quantum-signature/page/1" target="_blank"
+            <a wire:navigate href="https://view.publitas.com/e-books/quantum-signature/page/1" target="_blank"
                class="inline-flex space-x-4">
                 <span class="rounded-full bg-primary-500/10 px-3 py-1 text-sm font-semibold leading-6 text-primary-400 ring-1 ring-inset ring-primary-500/20">What's new</span>
                 <span
@@ -23,10 +23,10 @@
             <p class="max-w-2xl leading-text">We offer a wide range of high-quality shutters and blinds at affordable prices. Our shutters and blinds are perfect for any room in the house and will add style and function to your space.
             </p>
             <div class="flex space-x-4">
-                <a href="{{ route('home') }}"
+                <a wire:navigate href="{{ route('home') }}"
                    class="btn mt-4 btn-gradient px-3 py-2 md:px-6 md:py-4 text-white">Request
                     a free quote</a>
-                <a href="#learn-more"
+                <a wire:navigate href="#learn-more"
                    class=" mt-4 btn-secondary relative btn px-3 py-2 md:px-6 md:py-4 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-100/10">Learn
                     more
                     <div aria-hidden="true"
