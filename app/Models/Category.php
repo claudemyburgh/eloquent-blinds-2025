@@ -2,6 +2,7 @@
 
     namespace App\Models;
 
+    use App\Traits\HasMeta;
     use App\Traits\Live;
     use Illuminate\Database\Eloquent\Factories\HasFactory;
     use Illuminate\Database\Eloquent\Model;
@@ -17,7 +18,7 @@
     class Category extends Model implements HasMedia
     {
         /** @use HasFactory<\Database\Factories\CategoryFactory> */
-        use HasFactory, NodeTrait, SoftDeletes, InteractsWithMedia, Live;
+        use HasFactory, NodeTrait, SoftDeletes, InteractsWithMedia, Live, HasMeta;
 
         protected $fillable = [
             'title',

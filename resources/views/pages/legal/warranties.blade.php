@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot:seo>
+        <x-meta-tags :$meta/>
+    </x-slot:seo>
 
     <section class="prose dark:prose-invert mx-auto py-32 relative z-10 max-w-2xl">
         <section>

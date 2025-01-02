@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot:seo>
+        <x-meta-tags :$meta/>
+    </x-slot:seo>
     <section class="space-y-16 py-16 lg:py-32 z-10 wrapper">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 dark:border-gray-800 relative">
             <div class="relative">

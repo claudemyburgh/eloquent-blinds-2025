@@ -1,6 +1,9 @@
 <x-app-layout>
-    <x-hero/>
+    <x-slot:seo>
+        <x-meta-tags/>
+    </x-slot:seo>
 
+    <x-hero/>
     <div id="learn-more" class="wrapper  md:grid mt-24 md:mt-32 grid-cols-12 gap-8 text-gray-500 dark:text-gray-300">
         <div class="md:col-span-12 mb-6 lg:col-span-6 relative">
             <div class="max-w-full sticky top-32">

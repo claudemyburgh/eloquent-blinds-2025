@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot:seo>
+        <x-meta-tags :$meta/>
+    </x-slot:seo>
     <div class="wrapper space-y-4 grid md:grid-cols-2 gap-6 	">
         <div class="w-full relative">
             <x-contact.section/>

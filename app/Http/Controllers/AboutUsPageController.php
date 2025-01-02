@@ -11,6 +11,11 @@
          */
         public function __invoke(): View
         {
-            return view('pages.about-us');
+            return view('pages.about-us', [
+                "meta" => [
+                    "title" => 'About Us',
+                    "description" => "Find out more about us."
+                ]
+            ]);
         }
     }

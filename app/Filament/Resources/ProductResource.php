@@ -64,6 +64,8 @@
                         Forms\Components\TextInput::make('title')
                             ->unique(table: 'products', column: 'title', ignoreRecord: true)
                             ->required()
+                            ->live(onBlur: true)
+                            ->copyToField('meta.meta_title')
                             ->generateSlug()
                             ->maxLength(191),
 
@@ -77,9 +79,12 @@
                             ->rows(3)
                             ->cols(80)
                             ->autosize()
+                            ->live(onBlur: true)
+                            ->copyToField('meta.meta_description')
                             ->columnSpanFull(),
 
                         Forms\Components\SpatieTagsInput::make('tags')
+                            ->live(onBlur: true)
                             ->type('products'),
 
                         Forms\Components\MarkdownEditor::make('content')
@@ -97,30 +102,51 @@
                                 Forms\Components\Toggle::make('popular'),
                             ])
                         ]),
-                        Forms\Components\Section::make('Supplier Details')->schema([
+                        Forms\Components\Group::make([
+                            Forms\Components\Section::make('Supplier Details')->schema([
 
-                            Forms\Components\Select::make('availability')
-                                ->native(false)
-                                ->searchable()
-                                ->required()
-                                ->default(Availability::AVAILABLE)
-                                ->options(Arr::sort(Availability::options())),
+                                Forms\Components\Select::make('availability')
+                                    ->native(false)
+                                    ->searchable()
+                                    ->required()
+                                    ->default(Availability::AVAILABLE)
+                                    ->options(Arr::sort(Availability::options())),
 
-                            Forms\Components\Select::make('guarantee')
-                                ->native(false)
-                                ->searchable()
-                                ->options(Guarantee::options()),
+                                Forms\Components\Select::make('guarantee')
+                                    ->native(false)
+                                    ->searchable()
+                                    ->options(Guarantee::options()),
 
-                            Forms\Components\Select::make('supplier')
-                                ->native(false)
-                                ->searchable()
-                                ->options(Arr::sort(Supplier::options())),
+                                Forms\Components\Select::make('supplier')
+                                    ->native(false)
+                                    ->searchable()
+                                    ->options(Arr::sort(Supplier::options())),
 
-                            Forms\Components\TextInput::make('supplier_code')
-                                ->maxLength(191),
+                                Forms\Components\TextInput::make('supplier_code')
+                                    ->maxLength(191),
 
 
+                            ]),
+                            Forms\Components\Section::make('Category Meta Tags')
+                                ->relationship('meta')
+                                ->schema(components: [
+                                    Forms\Components\FileUpload::make('meta_image')
+                                        ->image()
+                                        ->directory('seo-image')
+                                        ->imageEditorAspectRatios(['1.91:1'])
+                                        ->imageEditor(),
+                                    Forms\Components\TextInput::make('meta_title')
+                                        ->required()
+                                        ->maxLength(191),
+                                    Forms\Components\Textarea::make('meta_description')
+                                        ->autosize()
+                                        ->rows(4)
+                                        ->required()
+                                        ->maxLength(300),
+                                    Forms\Components\TagsInput::make('meta_keywords'),
+                                ])
                         ]),
+
                     ])->columnSpan(1),
 
                 ])->columns(3);

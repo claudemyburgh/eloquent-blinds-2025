@@ -12,6 +12,11 @@
          */
         public function __invoke(): View
         {
-            return view('pages.legal.warranties');
+            return view('pages.legal.warranties', [
+                'meta' => [
+                    'title' => 'Warranties',
+                    'description' => "The Company warrants that the following products manufactured by it will be free from defects in material and workmanship for the below mentioned periods from date of delivery.",
+                ]
+            ]);
         }
     }

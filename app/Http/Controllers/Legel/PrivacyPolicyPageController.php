@@ -12,6 +12,11 @@
          */
         public function __invoke(): View
         {
-            return view('pages.legal.privacy-policy');
+            return view('pages.legal.privacy-policy', [
+                "meta" => [
+                    "title" => "Privacy Policy",
+                    "description" => " This Privacy Policy document contains types of information that is collected and recorded by Eloquent Blinds and how we use it.",
+                ]
+            ]);
         }
     }

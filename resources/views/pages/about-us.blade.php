@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot:seo>
+        <x-meta-tags :$meta/>
+    </x-slot:seo>
     <div class="wrapper my-12">
         <h1 class="text-shadow-sm mb-2 text-shadow-primary-900 text-4xl">About Us</h1>
         <p class="max-w-xl">

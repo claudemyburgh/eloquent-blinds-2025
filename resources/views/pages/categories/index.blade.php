@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot:seo>
+        <x-meta-tags :$meta/>
+    </x-slot:seo>
     <section class="relative">
         <div class="wrapper py-24 lg:py-32 space-y-16">
             <div class="lg:flex">

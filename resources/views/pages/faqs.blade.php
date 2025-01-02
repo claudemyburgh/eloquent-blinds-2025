@@ -1,4 +1,8 @@
 <x-app-layout>
+    <x-slot:seo>
+        <x-meta-tags :$meta/>
+    </x-slot:seo>
+
     <div class="wrapper pt-24 lg:pt-24 space-y-4">
         <div class="grid md:grid-cols-2 md:divide-x md:divide-dashed md:divide-gray-900/10 md:dark:divide-gray-500/10">
             <div class="relative md:pr-6">

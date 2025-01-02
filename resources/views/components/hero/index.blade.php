@@ -23,10 +23,10 @@
             <p class="max-w-2xl leading-text">We offer a wide range of high-quality shutters and blinds at affordable prices. Our shutters and blinds are perfect for any room in the house and will add style and function to your space.
             </p>
             <div class="flex space-x-4">
-                <a wire:navigate href="{{ route('home') }}"
+                <a wire:navigate href="{{ route('quote.index') }}"
                    class="btn mt-4 btn-gradient px-3 py-2 md:px-6 md:py-4 text-white">Request
                     a free quote</a>
-                <a wire:navigate href="#learn-more"
+                <a href="#learn-more"
                    class=" mt-4 btn-secondary relative btn px-3 py-2 md:px-6 md:py-4 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-100/10">Learn
                     more
                     <div aria-hidden="true"

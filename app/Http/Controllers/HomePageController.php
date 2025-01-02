@@ -4,6 +4,7 @@
 
 
     use App\Models\Product;
+    use Illuminate\Contracts\View\View;
     use Illuminate\Support\Facades\Cache;
 
 
@@ -12,7 +13,7 @@
         /**
          * Handle the incoming request.
          */
-        public function __invoke()
+        public function __invoke(): View
         {
             return view('pages.home', [
                 'products' => Cache::remember('home-products', config('cache.time_to_life'), function () {

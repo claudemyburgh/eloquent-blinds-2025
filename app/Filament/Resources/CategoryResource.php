@@ -47,6 +47,8 @@
                             ->unique(table: 'categories', column: 'title', ignoreRecord: true)
                             ->required()
                             ->generateSlug()
+                            ->live(onBlur: true)
+                            ->copyToField('meta.meta_title')
                             ->maxLength(191),
 
                         Forms\Components\TextInput::make('slug')
@@ -67,6 +69,8 @@
                             ->columnSpanFull(),
 
                         Forms\Components\Textarea::make('description')
+                            ->live(onBlur: true)
+                            ->copyToField('meta.meta_description')
                             ->rows(3)
                             ->cols(80)
                             ->autosize()
@@ -75,18 +79,38 @@
                         Forms\Components\MarkdownEditor::make('content')
                             ->minHeight('250px')
                             ->columnSpanFull(),
-                    ]),
-                    Forms\Components\Section::make('Status')->schema([
-                        Forms\Components\Toggle::make('popular')
-                            ->required(),
+                    ])->columnSpan(2),
+                    Forms\Components\Group::make([
+                        Forms\Components\Section::make('Status')->schema([
+                            Forms\Components\Toggle::make('popular')
+                                ->required(),
 
-                        Forms\Components\Toggle::make('live')
-                            ->required(),
+                            Forms\Components\Toggle::make('live')
+                                ->required(),
 
-                    ]),
+                        ]),
+                        Forms\Components\Section::make('Category Meta Tags')
+                            ->relationship('meta')
+                            ->schema(components: [
+                                Forms\Components\FileUpload::make('meta_image')
+                                    ->image()
+                                    ->directory('meta-image')
+                                    ->imageEditorAspectRatios(['1.91:1'])
+                                    ->imageEditor(),
+                                Forms\Components\TextInput::make('meta_title')
+                                    ->required()
+                                    ->maxLength(191),
+                                Forms\Components\Textarea::make('meta_description')
+                                    ->autosize()
+                                    ->rows(4)
+                                    ->required()
+                                    ->maxLength(300),
+                                Forms\Components\TagsInput::make('meta_keywords'),
+                            ])
+                    ])->columnSpan(1)
 
 
-                ]);
+                ])->columns(3);
         }
 
         public static function table(Table $table): Table

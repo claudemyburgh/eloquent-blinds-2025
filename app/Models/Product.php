@@ -3,6 +3,7 @@
     namespace App\Models;
 
     use App\Enums\Supplier;
+    use App\Traits\HasMeta;
     use App\Traits\Live;
     use Illuminate\Database\Eloquent\Builder;
     use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -18,7 +19,7 @@
     class Product extends Model implements HasMedia
     {
         /** @use HasFactory<\Database\Factories\ProductFactory> */
-        use HasFactory, InteractsWithMedia, HasTags, SoftDeletes, Live;
+        use HasFactory, InteractsWithMedia, HasTags, SoftDeletes, Live, HasMeta;
 
         protected $fillable = [
             'category_id',

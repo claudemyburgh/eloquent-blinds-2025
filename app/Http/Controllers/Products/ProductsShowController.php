@@ -19,13 +19,14 @@
                 'product' => $product = Cache::remember('product-id-' . $product->id,
                     config('cache.time_to_life'),
                     function () use ($product) {
-                        return $product->load(['media']);
+                        return $product->load(['media', 'meta']);
                     }),
                 'category' => Cache::remember('product-category-id-' . $category->id,
                     config('cache.time_to_life'),
                     function () use ($category) {
                         return $category->load('products.media');
                     }),
+                'meta' => $product?->meta?->toArray() ?? config('seo-meta')
             ]);
         }
     }
