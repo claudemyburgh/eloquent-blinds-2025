@@ -19,7 +19,7 @@
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Eloquent Blinds | {{ $meta['meta_title'] ?? $meta['title'] }}">
 <meta property="og:description" content="{{ $meta['meta_description'] ?? $meta['description'] }}">
-<meta property="og:image" content="{{ $meta['meta_image'] ?? $meta['image'] ?? Vite::asset('resources/img/meta/eloquent.jpg')  }}">
+<meta property="og:image" content="{{ $meta['meta_image'] ?? Vite::asset('resources/img/meta/eloquent.jpg')  }}">
 
 {{--  Twitter Meta Tags --}}
 <meta name="twitter:card" content="summary_large_image"/>
