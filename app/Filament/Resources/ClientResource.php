@@ -3,7 +3,6 @@
     namespace App\Filament\Resources;
 
     use App\Filament\Resources\ClientResource\Pages;
-    use App\Filament\Resources\ClientResource\RelationManagers;
     use App\Models\Client;
     use Filament\Forms;
     use Filament\Forms\Form;
@@ -26,6 +25,11 @@
         public static function getGloballySearchableAttributes(): array
         {
             return ['first_name', 'last_name', 'email', 'phone'];
+        }
+
+        public static function getNavigationBadge(): ?string
+        {
+            return static::getModel()::count();
         }
 
         public static function form(Form $form): Form
@@ -97,7 +101,12 @@
                     Tables\Filters\TrashedFilter::make(),
                 ])
                 ->actions([
-                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\ActionGroup::make([
+                        Tables\Actions\EditAction::make(),
+                        Tables\Actions\DeleteAction::make(),
+                        Tables\Actions\ForceDeleteAction::make(),
+                        Tables\Actions\RestoreAction::make(),
+                    ])
                 ])
                 ->bulkActions([
                     Tables\Actions\BulkActionGroup::make([
