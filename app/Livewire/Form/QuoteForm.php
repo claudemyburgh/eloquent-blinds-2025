@@ -36,7 +36,7 @@
 
             event(new QuoteSubmittedEvent($this->validate()));
 
-            $emailExists = Client::where('email', $data['email'])->count() > 0;
+            $emailExists = Client::withTrashed()->where('email', $data['email'])->count() > 0;
 
             $this->triggerSuccess();
 
