@@ -36,11 +36,17 @@
 
             event(new QuoteSubmittedEvent($this->validate()));
 
-            $emailExists = Client::withTrashed()->where('email', $data['email'])->count() > 0;
+            $emailUserExists = Client::withTrashed()->where('email', $data['email'])->first();
+
 
             $this->triggerSuccess();
 
-            if (!$emailExists) {
+
+            if ($emailUserExists?->exists && $emailUserExists?->trashed()) {
+                $emailUserExists?->restore();
+            }
+
+            if (!$emailUserExists?->exists) {
                 Client::create([
                     'first_name' => $data['first_name'],
                     'last_name' => $data['last_name'],
