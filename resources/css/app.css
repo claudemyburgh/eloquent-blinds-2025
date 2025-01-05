@@ -12,6 +12,7 @@
 @import "text-and-heading.css";
 @import "splide.css";
 @import "swiper.css";
+@import "libs/toaster/toaster.css";
 
 @layer components {
     .wrapper {

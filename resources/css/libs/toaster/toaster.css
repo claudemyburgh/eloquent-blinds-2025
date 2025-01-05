@@ -1,0 +1,52 @@
+@layer utilities {
+
+
+    .toast-container {
+        @apply fixed top-5 right-5 pointer-events-none z-[1000];
+    }
+
+    .toast {
+        @apply bg-white w-[350px] dark:bg-gray-950 border border-gray-300 dark:border-gray-800 rounded-default shadow-lg shadow-black/50 dark:shadow-primary-500/20 mb-4 p-4 flex items-center opacity-0 translate-x-full pointer-events-auto transition-all ;
+
+    }
+
+    .toast.slide-in-active {
+        @apply opacity-100 translate-x-0;
+    }
+
+    .toast.slide-out {
+        @apply opacity-0 translate-x-full;
+    }
+
+    .flex-container {
+        @apply flex items-center;
+    }
+
+    .icon-container {
+        @apply mr-4  self-start top-4;
+    }
+
+    .text-container {
+        @apply flex-grow;
+    }
+
+    .toast-title {
+        @apply font-bold mr-12;
+    }
+
+    .toast-description {
+        @apply m-0 text-sm text-gray-400 dark:text-gray-600;
+    }
+
+    .close-button-container {
+        @apply mr-4;
+    }
+
+    .close-button {
+        @apply cursor-pointer text-xs text-gray-400 dark:text-gray-600 top-4 right-4 absolute;
+    }
+
+    .progress-bar {
+        @apply absolute bottom-0 left-0 h-1 bg-black/10 dark:bg-gray-700 w-0 transition-all;
+    }
+}

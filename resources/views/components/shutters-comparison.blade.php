@@ -4,7 +4,7 @@
             Shutters Comparison</h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4 ">
             @foreach($comparison as $comp)
-                <a href="{{ route('products.show', ['shutters', $comp->link]) }}"
+                <a wire:navigate href="{{ route('products.show', ['shutters', $comp->link]) }}"
                    class="shadow-xl shadow-primary-500/20 flex rounded-default ">
                     <mouse-spotlight
                         class="relative border w-full flex flex-col border-primary-500/50 p-4 rounded-default transition-all hover:scale-105 bg-white dark:bg-gray-900">

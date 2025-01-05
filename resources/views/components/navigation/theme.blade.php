@@ -9,8 +9,8 @@
             type="button"
         >
             <span class="sr-only">Toggle between light and dark mode</span>
-            <x-heroicon-s-sun class="size-5 dark:block hidden"/>
-            <x-heroicon-s-moon class="size-5 dark:hidden block"/>
+            <x-heroicon-s-sun class="size-4 dark:block hidden"/>
+            <x-heroicon-s-moon class="size-4 dark:hidden block"/>
         </button>
     </div>
     <div
@@ -22,39 +22,39 @@
     >
         <div class="py-1" role="none">
             <button class="text-gray-700 dark:text-gray-300 flex items-center justify-start px-4 py-2 text-sm hover:bg-primary-100 focus:bg-primary-100 dark:hover:bg-primary-500 dark:focus:bg-primary-500 dark:hover:text-gray-900
-            focus:outline-none
+            focus:outline-none  aria-current:bg-primary-500/25
             w-full"
                     id="menu-item-1"
                     role="menuitem"
                     tabindex="-1"
                     data-theme-name="light">
                     <span class="mr-4">
-                        <x-heroicon-s-sun class="size-5"/>
+                        <x-heroicon-s-sun class="size-4"/>
                     </span>
                 Light
             </button>
             <button class="text-gray-700 dark:text-gray-300 flex items-center justify-start px-4 py-2 text-sm hover:bg-primary-100 focus:bg-primary-100 dark:hover:bg-primary-500 dark:focus:bg-primary-500 dark:hover:text-gray-900
-            focus:outline-none
+            focus:outline-none aria-current:bg-primary-500/25
             w-full"
                     id="menu-item-0"
                     role="menuitem"
                     tabindex="-1"
                     data-theme-name="dark">
                     <span class="mr-4">
-                    <x-heroicon-s-moon class="size-5"/>
+                    <x-heroicon-s-moon class="size-4"/>
 
                     </span>
                 Dark
             </button>
             <button class="text-gray-700 dark:text-gray-300 flex items-center justify-start px-4 py-2 text-sm hover:bg-primary-100 focus:bg-primary-100 dark:hover:bg-primary-500 dark:focus:bg-primary-500 dark:hover:text-gray-900
-            focus:outline-none
+            focus:outline-none aria-current:bg-primary-500/25
             w-full"
                     id="menu-item-2"
                     role="menuitem"
                     tabindex="-1"
                     data-theme-name="system">
                 <span class="mr-4">
-                    <x-heroicon-s-computer-desktop class="size-5"/>
+                    <x-heroicon-s-computer-desktop class="size-4"/>
                 </span>
                 System
             </button>

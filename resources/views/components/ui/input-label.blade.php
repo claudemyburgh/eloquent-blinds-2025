@@ -4,7 +4,7 @@
 
 <label for="{{ $for }}" {{ $attributes->merge(['class' => $classes]) }}>
     {{ $slot->isNotEmpty() ? $slot : $fallback }}
-    {!! $required ?? '<span class="text-red-500">*</span>' !!}
+    {!! $requered ?? '<span class="text-red-500">*</span>' !!}
 </label>
 
 

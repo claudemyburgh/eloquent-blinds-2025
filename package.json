@@ -13,6 +13,7 @@
         "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
         "@tailwindcss/postcss": "4.0.0-beta.8",
         "@tailwindcss/typography": "^0.5.15",
+        "@types/canvas-confetti": "^1.9.0",
         "@types/photoswipe": "^4.1.6",
         "alpinejs-textarea-grow": "^1.0.5",
         "autoprefixer": "^10.4.20",
@@ -25,7 +26,7 @@
         "prettier": "^3.4.2",
         "tailwindcss": "^3.4.17",
         "tailwindcss-attributes": "^1.2.3",
-        "vite": "^6.0.6"
+        "vite": "^6.0.7"
     },
     "dependencies": {
         "@designbycode/theme-manager": "^1.1.3",
