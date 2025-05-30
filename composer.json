@@ -25,7 +25,6 @@
         "livewire/volt": "^1.6",
         "propaganistas/laravel-phone": "^5.3",
         "pxlrbt/filament-excel": "^2.3",
-        "resend/resend-laravel": "^0.15.0",
         "spatie/laravel-backup": "^9.3"
     },
     "require-dev": {
