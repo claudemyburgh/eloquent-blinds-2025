@@ -19,6 +19,8 @@
 
         'placeholder_meta_image' => 'https://fakeimg.pl/600x600',
 
+        'force_https' => env('APP_FORCE_HTTPS', false),
+
         /*
         |--------------------------------------------------------------------------
         | Application Environment

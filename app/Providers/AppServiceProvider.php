@@ -2,8 +2,10 @@
 
     namespace App\Providers;
 
+
     use Illuminate\Support\Facades\Blade;
     use Illuminate\Support\Facades\Schema;
+    use Illuminate\Support\Facades\URL;
     use Illuminate\Support\ServiceProvider;
 
     class AppServiceProvider extends ServiceProvider
@@ -24,6 +26,9 @@
             Schema::defaultStringLength(191);
 
             Blade::anonymousComponentPath(__DIR__ . '/../../resources/views/layouts/partials', 'app');
+
+            URL::forceHttps(config('app.force_https'));
+
 
         }
     }
